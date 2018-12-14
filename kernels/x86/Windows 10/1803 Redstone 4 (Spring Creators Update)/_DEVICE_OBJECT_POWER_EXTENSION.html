@@ -23,14 +23,7 @@ struct _DEVICE_OBJECT_POWER_EXTENSION
     enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_DEVICE_POWER_STATE'> _DEVICE_POWER_STATE</a> CurrentState;                                  //0x2c
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_POP_COOLING_EXTENSION'> _POP_COOLING_EXTENSION</a>* CoolingExtension;                        //0x30
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_LIST_ENTRY'>_LIST_ENTRY</a> Volume;                                              //0x34
-    union
-    {
-        struct
-        {
-            ULONG IdleTime;                                                 //0x3c
-            ULONG NonIdleTime;                                              //0x40
-        } Disk;                                                             //0x3c
-    } Specific;                                                             //0x3c
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/<unnamed-tag>'> <unnamed-tag></a> Specific;                                                      //0x3c
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_DEVOBJ_EXTENSION" tabindex="-1" class="related">_DEVOBJ_EXTENSION</a></li></ul></div><!--else.block
 script.
     if($(".container.mainblock-content.main-tdata-sm").height() < 600)

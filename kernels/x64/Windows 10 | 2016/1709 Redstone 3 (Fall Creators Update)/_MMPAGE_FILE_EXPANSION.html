@@ -17,11 +17,7 @@ struct _MMPAGE_FILE_EXPANSION
     ULONGLONG ActualExpansion;                                              //0x28
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/_KEVENT'>_KEVENT</a> Event;                                                   //0x30
     volatile LONG InProgress;                                               //0x48
-    union
-    {
-        ULONG LongFlags;                                                    //0x4c
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/_MMPAGE_FILE_EXPANSION_FLAGS'>_MMPAGE_FILE_EXPANSION_FLAGS</a> Flags;                          //0x4c
-    } u1;                                                                   //0x4c
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x4c
     VOID** volatile ActiveEntry;                                            //0x50
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/_MI_PARTITION_MODWRITES" tabindex="-1" class="related">_MI_PARTITION_MODWRITES</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/_MI_PARTITION_SEGMENTS" tabindex="-1" class="related">_MI_PARTITION_SEGMENTS</a></li></ul></div><!--else.block
 script.

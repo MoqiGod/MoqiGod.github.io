@@ -46,23 +46,11 @@ struct _DEVICE_NODE
     USHORT QueryTranslatorMask;                                             //0x13a
     USHORT NoArbiterMask;                                                   //0x13c
     USHORT QueryArbiterMask;                                                //0x13e
-    union
-    {
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_DEVICE_NODE'> _DEVICE_NODE</a>* LegacyDeviceNode;                              //0x140
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_DEVICE_RELATIONS'> _DEVICE_RELATIONS</a>* PendingDeviceRelations;                   //0x140
-    } OverUsed1;                                                            //0x140
-    union
-    {
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_DEVICE_NODE'> _DEVICE_NODE</a>* NextResourceDeviceNode;                        //0x148
-    } OverUsed2;                                                            //0x148
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/<unnamed-tag>'> <unnamed-tag></a> OverUsed1;                                                     //0x140
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/<unnamed-tag>'> <unnamed-tag></a> OverUsed2;                                                     //0x148
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_CM_RESOURCE_LIST'> _CM_RESOURCE_LIST</a>* BootResources;                                //0x150
     ULONG CapabilityFlags;                                                  //0x158
-    struct
-    {
-        enum<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/PROFILE_STATUS'> PROFILE_STATUS</a> DockStatus;                                     //0x160
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_LIST_ENTRY'>_LIST_ENTRY</a> ListEntry;                                       //0x168
-        USHORT* SerialNumber;                                               //0x178
-    } DockInfo;                                                             //0x160
+    struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/<unnamed-tag>'><unnamed-tag></a> DockInfo;                                                     //0x160
     ULONG DisableableDepends;                                               //0x180
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_LIST_ENTRY'>_LIST_ENTRY</a> PendedSetInterfaceState;                             //0x188
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_LIST_ENTRY'>_LIST_ENTRY</a> LegacyBusListEntry;                                  //0x198

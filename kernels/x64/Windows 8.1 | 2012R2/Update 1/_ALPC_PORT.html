@@ -41,29 +41,7 @@ struct _ALPC_PORT
     LONG SequenceNo;                                                        //0x178
     LONG ReferenceNo;                                                       //0x17c
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/_PALPC_PORT_REFERENCE_WAIT_BLOCK'> _PALPC_PORT_REFERENCE_WAIT_BLOCK</a>* ReferenceNoWait;               //0x180
-    union
-    {
-        struct
-        {
-            ULONG Initialized:1;                                            //0x188
-            ULONG Type:2;                                                   //0x188
-            ULONG ConnectionPending:1;                                      //0x188
-            ULONG ConnectionRefused:1;                                      //0x188
-            ULONG Disconnected:1;                                           //0x188
-            ULONG Closed:1;                                                 //0x188
-            ULONG NoFlushOnClose:1;                                         //0x188
-            ULONG ReturnExtendedInfo:1;                                     //0x188
-            ULONG Waitable:1;                                               //0x188
-            ULONG DynamicSecurity:1;                                        //0x188
-            ULONG Wow64CompletionList:1;                                    //0x188
-            ULONG Lpc:1;                                                    //0x188
-            ULONG LpcToLpc:1;                                               //0x188
-            ULONG HasCompletionList:1;                                      //0x188
-            ULONG HadCompletionList:1;                                      //0x188
-            ULONG EnableCompletionList:1;                                   //0x188
-        } s1;                                                               //0x188
-        ULONG State;                                                        //0x188
-    } u1;                                                                   //0x188
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x188
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/_ALPC_PORT'> _ALPC_PORT</a>* TargetQueuePort;                                     //0x190
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/_ALPC_PORT'> _ALPC_PORT</a>* TargetSequencePort;                                  //0x198
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/_KALPC_MESSAGE'> _KALPC_MESSAGE</a>* CachedMessage;                                   //0x1a0

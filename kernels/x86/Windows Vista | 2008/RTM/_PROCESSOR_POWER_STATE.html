@@ -23,13 +23,7 @@ struct _PROCESSOR_POWER_STATE
     ULONGLONG LastProcessorTimeHv;                                          //0x50
     UCHAR ThermalConstraint;                                                //0x58
     UCHAR LastBusyPercentage;                                               //0x59
-    union
-    {
-        USHORT AsUSHORT;                                                    //0x5a
-        USHORT PStateDomain:1;                                              //0x5a
-        USHORT PStateDomainIdleAccounting:1;                                //0x5a
-        USHORT Reserved:14;                                                 //0x5a
-    } Flags;                                                                //0x5a
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/RTM/<unnamed-tag>'> <unnamed-tag></a> Flags;                                                         //0x5a
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/RTM/_KTIMER'>_KTIMER</a> PerfTimer;                                               //0x60
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/RTM/_KDPC'>_KDPC</a> PerfDpc;                                                   //0x88
     ULONG LastSysTime;                                                      //0xa8

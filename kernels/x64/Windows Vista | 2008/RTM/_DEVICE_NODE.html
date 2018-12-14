@@ -47,25 +47,12 @@ struct _DEVICE_NODE
     USHORT QueryTranslatorMask;                                             //0x192
     USHORT NoArbiterMask;                                                   //0x194
     USHORT QueryArbiterMask;                                                //0x196
-    union
-    {
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/RTM/_DEVICE_NODE'> _DEVICE_NODE</a>* LegacyDeviceNode;                              //0x198
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/RTM/_DEVICE_RELATIONS'> _DEVICE_RELATIONS</a>* PendingDeviceRelations;                   //0x198
-        VOID* Information;                                                  //0x198
-    } OverUsed1;                                                            //0x198
-    union
-    {
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/RTM/_DEVICE_NODE'> _DEVICE_NODE</a>* NextResourceDeviceNode;                        //0x1a0
-    } OverUsed2;                                                            //0x1a0
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/RTM/<unnamed-tag>'> <unnamed-tag></a> OverUsed1;                                                     //0x198
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/RTM/<unnamed-tag>'> <unnamed-tag></a> OverUsed2;                                                     //0x1a0
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/RTM/_CM_RESOURCE_LIST'> _CM_RESOURCE_LIST</a>* BootResources;                                //0x1a8
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/RTM/_CM_RESOURCE_LIST'> _CM_RESOURCE_LIST</a>* BootResourcesTranslated;                      //0x1b0
     ULONG CapabilityFlags;                                                  //0x1b8
-    struct
-    {
-        enum<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/RTM/PROFILE_STATUS'> PROFILE_STATUS</a> DockStatus;                                     //0x1c0
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/RTM/_LIST_ENTRY'>_LIST_ENTRY</a> ListEntry;                                       //0x1c8
-        USHORT* SerialNumber;                                               //0x1d8
-    } DockInfo;                                                             //0x1c0
+    struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/RTM/<unnamed-tag>'><unnamed-tag></a> DockInfo;                                                     //0x1c0
     ULONG DisableableDepends;                                               //0x1e0
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/RTM/_LIST_ENTRY'>_LIST_ENTRY</a> PendedSetInterfaceState;                             //0x1e8
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/RTM/_LIST_ENTRY'>_LIST_ENTRY</a> LegacyBusListEntry;                                  //0x1f8

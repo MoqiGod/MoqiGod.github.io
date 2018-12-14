@@ -24,11 +24,7 @@ struct _DEVICE_OBJECT
     VOID* DeviceExtension;                                                  //0x40
     ULONG DeviceType;                                                       //0x48
     CHAR StackSize;                                                         //0x4c
-    union
-    {
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_LIST_ENTRY'>_LIST_ENTRY</a> ListEntry;                                       //0x50
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_WAIT_CONTEXT_BLOCK'>_WAIT_CONTEXT_BLOCK</a> Wcb;                                     //0x50
-    } Queue;                                                                //0x50
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/<unnamed-tag>'> <unnamed-tag></a> Queue;                                                         //0x50
     ULONG AlignmentRequirement;                                             //0x98
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_KDEVICE_QUEUE'>_KDEVICE_QUEUE</a> DeviceQueue;                                      //0xa0
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_KDPC'>_KDPC</a> Dpc;                                                       //0xc8

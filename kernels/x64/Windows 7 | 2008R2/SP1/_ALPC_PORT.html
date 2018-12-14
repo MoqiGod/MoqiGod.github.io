@@ -37,29 +37,7 @@ struct _ALPC_PORT
     VOID* CallbackContext;                                                  //0x150
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/SP1/_LIST_ENTRY'>_LIST_ENTRY</a> CanceledQueue;                                       //0x158
     volatile LONG SequenceNo;                                               //0x168
-    union
-    {
-        struct
-        {
-            ULONG Initialized:1;                                            //0x16c
-            ULONG Type:2;                                                   //0x16c
-            ULONG ConnectionPending:1;                                      //0x16c
-            ULONG ConnectionRefused:1;                                      //0x16c
-            ULONG Disconnected:1;                                           //0x16c
-            ULONG Closed:1;                                                 //0x16c
-            ULONG NoFlushOnClose:1;                                         //0x16c
-            ULONG ReturnExtendedInfo:1;                                     //0x16c
-            ULONG Waitable:1;                                               //0x16c
-            ULONG DynamicSecurity:1;                                        //0x16c
-            ULONG Wow64CompletionList:1;                                    //0x16c
-            ULONG Lpc:1;                                                    //0x16c
-            ULONG LpcToLpc:1;                                               //0x16c
-            ULONG HasCompletionList:1;                                      //0x16c
-            ULONG HadCompletionList:1;                                      //0x16c
-            ULONG EnableCompletionList:1;                                   //0x16c
-        } s1;                                                               //0x16c
-        ULONG State;                                                        //0x16c
-    } u1;                                                                   //0x16c
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/SP1/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x16c
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/SP1/_ALPC_PORT'> _ALPC_PORT</a>* TargetQueuePort;                                     //0x170
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/SP1/_ALPC_PORT'> _ALPC_PORT</a>* TargetSequencePort;                                  //0x178
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/SP1/_KALPC_MESSAGE'> _KALPC_MESSAGE</a>* volatile CachedMessage;                          //0x180

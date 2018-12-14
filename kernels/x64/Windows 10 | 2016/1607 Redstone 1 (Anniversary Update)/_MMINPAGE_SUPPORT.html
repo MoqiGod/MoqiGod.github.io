@@ -22,16 +22,8 @@ struct _MMINPAGE_SUPPORT
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/_MMPTE'>_MMPTE</a> PteContents;                                              //0xa8
     volatile LONG WaitCount;                                                //0xb0
     ULONG ByteCount;                                                        //0xb4
-    union
-    {
-        ULONG ImagePteOffset;                                               //0xb8
-        ULONG TossPage;                                                     //0xb8
-    } u3;                                                                   //0xb8
-    union
-    {
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/_MMINPAGE_FLAGS'>_MMINPAGE_FLAGS</a> e1;                                          //0xbc
-        ULONG LongFlags;                                                    //0xbc
-    } u1;                                                                   //0xbc
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/<unnamed-tag>'> <unnamed-tag></a> u3;                                                            //0xb8
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0xbc
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/_FILE_OBJECT'> _FILE_OBJECT</a>* FilePointer;                                       //0xc0
     union
     {

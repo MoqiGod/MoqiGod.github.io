@@ -19,18 +19,11 @@ struct _SUBSECTION
         struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1511 Threshold 2/_MI_SUBSECTION_WAIT_BLOCK'> _MI_SUBSECTION_WAIT_BLOCK</a>* CreationWaitList;                 //0x18
         struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1511 Threshold 2/_MI_PER_SESSION_PROTOS'> _MI_PER_SESSION_PROTOS</a>* SessionDriverProtos;                 //0x18
     }
-    union
-    {
-        ULONG LongFlags;                                                    //0x20
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1511 Threshold 2/_MMSUBSECTION_FLAGS'>_MMSUBSECTION_FLAGS</a> SubsectionFlags;                         //0x20
-    } u;                                                                    //0x20
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1511 Threshold 2/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x20
     ULONG StartingSector;                                                   //0x24
     ULONG NumberOfFullSectors;                                              //0x28
     ULONG PtesInSubsection;                                                 //0x2c
-    union
-    {
-        ULONG NumberOfChildViews;                                           //0x30
-    } u1;                                                                   //0x30
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1511 Threshold 2/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x30
     union
     {
         struct
@@ -38,11 +31,7 @@ struct _SUBSECTION
             ULONG UnusedPtes:31;                                            //0x34
             ULONG DirtyPages:1;                                             //0x34
         }
-        struct
-        {
-            ULONG AlignmentNoAccessPtes:31;                                 //0x34
-            ULONG DirtyPages:1;                                             //0x34
-        } u2;                                                               //0x34
+        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1511 Threshold 2/<unnamed-tag>'><unnamed-tag></a> u2;                                                       //0x34
     }
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 10 | 2016/1511 Threshold 2/_MI_PER_SESSION_PROTOS" tabindex="-1" class="related">_MI_PER_SESSION_PROTOS</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1511 Threshold 2/_MI_REVERSE_VIEW_MAP" tabindex="-1" class="related">_MI_REVERSE_VIEW_MAP</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1511 Threshold 2/_MMINPAGE_SUPPORT" tabindex="-1" class="related">_MMINPAGE_SUPPORT</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1511 Threshold 2/_MMVAD" tabindex="-1" class="related">_MMVAD</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1511 Threshold 2/_MSUBSECTION" tabindex="-1" class="related">_MSUBSECTION</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1511 Threshold 2/_SUBSECTION" tabindex="-1" class="related">_SUBSECTION</a></li></ul></div><!--else.block
 script.

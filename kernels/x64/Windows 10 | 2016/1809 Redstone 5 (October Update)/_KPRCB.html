@@ -366,36 +366,7 @@ struct _KPRCB
     VOID* IsrStack;                                                         //0x62d8
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_KENTROPY_TIMING_STATE'>_KENTROPY_TIMING_STATE</a> EntropyTimingState;                       //0x62e0
     ULONGLONG PrcbPad110;                                                   //0x6430
-    struct
-    {
-        ULONG UpdateCycle;                                                  //0x6438
-        union
-        {
-            SHORT PairLocal;                                                //0x643c
-            struct
-            {
-                UCHAR PairLocalLow;                                         //0x643c
-                UCHAR PairLocalForceStibp:1;                                //0x643d
-                UCHAR Reserved:4;                                           //0x643d
-                UCHAR Frozen:1;                                             //0x643d
-                UCHAR ForceUntrusted:1;                                     //0x643d
-                UCHAR SynchIpi:1;                                           //0x643d
-            }
-        }
-        union
-        {
-            SHORT PairRemote;                                               //0x643e
-            struct
-            {
-                UCHAR PairRemoteLow;                                        //0x643e
-                UCHAR Reserved2;                                            //0x643f
-            }
-        }
-        UCHAR Trace[24];                                                    //0x6440
-        ULONGLONG LocalDomain;                                              //0x6458
-        ULONGLONG RemoteDomain;                                             //0x6460
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_KTHREAD'> _KTHREAD</a>* Thread;                                            //0x6468
-    } StibpPairingTrace;                                                    //0x6438
+    struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/<unnamed-tag>'><unnamed-tag></a> StibpPairingTrace;                                            //0x6438
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_SINGLE_LIST_ENTRY'>_SINGLE_LIST_ENTRY</a> AbSelfIoBoostsList;                           //0x6470
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_SINGLE_LIST_ENTRY'>_SINGLE_LIST_ENTRY</a> AbPropagateBoostsList;                        //0x6478
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_KDPC'>_KDPC</a> AbDpc;                                                     //0x6480

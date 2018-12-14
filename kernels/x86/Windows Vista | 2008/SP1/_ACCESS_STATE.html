@@ -22,11 +22,7 @@ struct _ACCESS_STATE
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP1/_SECURITY_SUBJECT_CONTEXT'>_SECURITY_SUBJECT_CONTEXT</a> SubjectSecurityContext;                //0x1c
     VOID* SecurityDescriptor;                                               //0x2c
     VOID* AuxData;                                                          //0x30
-    union
-    {
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP1/_INITIAL_PRIVILEGE_SET'>_INITIAL_PRIVILEGE_SET</a> InitialPrivilegeSet;                  //0x34
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP1/_PRIVILEGE_SET'>_PRIVILEGE_SET</a> PrivilegeSet;                                 //0x34
-    } Privileges;                                                           //0x34
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP1/<unnamed-tag>'> <unnamed-tag></a> Privileges;                                                    //0x34
     UCHAR AuditPrivileges;                                                  //0x60
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP1/_UNICODE_STRING'>_UNICODE_STRING</a> ObjectName;                                      //0x64
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP1/_UNICODE_STRING'>_UNICODE_STRING</a> ObjectTypeName;                                  //0x6c

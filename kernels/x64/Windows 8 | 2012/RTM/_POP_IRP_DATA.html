@@ -27,18 +27,8 @@ struct _POP_IRP_DATA
     UCHAR NotifyPEP;                                                        //0xd1
     union
     {
-        struct
-        {
-            VOID (*CallerCompletion)(struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8 | 2012/RTM/_DEVICE_OBJECT'> _DEVICE_OBJECT</a>* arg1, UCHAR arg2, union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8 | 2012/RTM/_POWER_STATE'> _POWER_STATE</a> arg3, VOID* arg4, struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8 | 2012/RTM/_IO_STATUS_BLOCK'> _IO_STATUS_BLOCK</a>* arg5); //0xd8
-            VOID* CallerContext;                                            //0xe0
-            struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8 | 2012/RTM/_DEVICE_OBJECT'> _DEVICE_OBJECT</a>* CallerDevice;                            //0xe8
-            UCHAR SystemWake;                                               //0xf0
-        } Device;                                                           //0xd8
-        struct
-        {
-            struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8 | 2012/RTM/_PO_DEVICE_NOTIFY'> _PO_DEVICE_NOTIFY</a>* NotifyDevice;                         //0xd8
-            UCHAR FxDeviceActivated;                                        //0xe0
-        } System;                                                           //0xd8
+        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8 | 2012/RTM/<unnamed-tag>'><unnamed-tag></a> Device;                                                   //0xd8
+        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8 | 2012/RTM/<unnamed-tag>'><unnamed-tag></a> System;                                                   //0xd8
     }
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 8 | 2012/RTM/_POP_FX_DEVICE" tabindex="-1" class="related">_POP_FX_DEVICE</a></li></ul></div><!--else.block
 script.

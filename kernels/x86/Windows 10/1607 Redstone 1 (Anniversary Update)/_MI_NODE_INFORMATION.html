@@ -20,11 +20,7 @@ struct _MI_NODE_INFORMATION
     ULONG MmShiftedColor;                                                   //0x9c
     ULONG Color;                                                            //0xa0
     volatile ULONG ChannelFreeCount[1][2];                                  //0xa4
-    struct
-    {
-        ULONG ChannelsHotCold:1;                                            //0xac
-        ULONG Spare:31;                                                     //0xac
-    } Flags;                                                                //0xac
+    struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1607 Redstone 1 (Anniversary Update)/<unnamed-tag>'><unnamed-tag></a> Flags;                                                        //0xac
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1607 Redstone 1 (Anniversary Update)/_EX_PUSH_LOCK'>_EX_PUSH_LOCK</a> NodeLock;                                          //0xb0
     UCHAR ChannelStatus;                                                    //0xb4
     UCHAR ChannelOrdering[1];                                               //0xb5

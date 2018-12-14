@@ -37,11 +37,7 @@ struct _LOADER_PARAMETER_BLOCK
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1809 Redstone 5 (October Update)/_NLS_DATA_BLOCK'> _NLS_DATA_BLOCK</a>* NlsData;                                        //0x7c
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1809 Redstone 5 (October Update)/_ARC_DISK_INFORMATION'> _ARC_DISK_INFORMATION</a>* ArcDiskInformation;                       //0x80
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1809 Redstone 5 (October Update)/_LOADER_PARAMETER_EXTENSION'> _LOADER_PARAMETER_EXTENSION</a>* Extension;                          //0x84
-    union
-    {
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1809 Redstone 5 (October Update)/_I386_LOADER_BLOCK'>_I386_LOADER_BLOCK</a> I386;                                     //0x88
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1809 Redstone 5 (October Update)/_ARM_LOADER_BLOCK'>_ARM_LOADER_BLOCK</a> Arm;                                       //0x88
-    } u;                                                                    //0x88
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1809 Redstone 5 (October Update)/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x88
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1809 Redstone 5 (October Update)/_FIRMWARE_INFORMATION_LOADER_BLOCK'>_FIRMWARE_INFORMATION_LOADER_BLOCK</a> FirmwareInformation;          //0x94
     CHAR* OsBootstatPathName;                                               //0xbc
     CHAR* ArcOSDataDeviceName;                                              //0xc0

@@ -15,14 +15,7 @@ struct _KALPC_SECURITY_DATA
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/_EPROCESS'> _EPROCESS</a>* OwningProcess;                                        //0x8
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/_ALPC_PORT'> _ALPC_PORT</a>* OwnerPort;                                           //0xc
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/_SECURITY_CLIENT_CONTEXT'>_SECURITY_CLIENT_CONTEXT</a> DynamicSecurity;                        //0x10
-    union
-    {
-        struct
-        {
-            ULONG Revoked:1;                                                //0x4c
-            ULONG Impersonated:1;                                           //0x4c
-        } s1;                                                               //0x4c
-    } u1;                                                                   //0x4c
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x4c
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x86/Windows 7/SP1/_KALPC_MESSAGE_ATTRIBUTES" tabindex="-1" class="related">_KALPC_MESSAGE_ATTRIBUTES</a></li></ul></div><!--else.block
 script.
     if($(".container.mainblock-content.main-tdata-sm").height() < 600)

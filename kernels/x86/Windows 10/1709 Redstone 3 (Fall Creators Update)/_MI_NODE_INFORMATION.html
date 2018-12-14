@@ -24,11 +24,7 @@ struct _MI_NODE_INFORMATION
     ULONG MmShiftedColor;                                                   //0x3e0
     ULONG Color;                                                            //0x3e4
     volatile ULONG ChannelFreeCount[1][2];                                  //0x3e8
-    struct
-    {
-        ULONG ChannelsHotCold:1;                                            //0x3f0
-        ULONG Spare:31;                                                     //0x3f0
-    } Flags;                                                                //0x3f0
+    struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1709 Redstone 3 (Fall Creators Update)/<unnamed-tag>'><unnamed-tag></a> Flags;                                                        //0x3f0
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1709 Redstone 3 (Fall Creators Update)/_EX_PUSH_LOCK'>_EX_PUSH_LOCK</a> NodeLock;                                          //0x3f4
     UCHAR ChannelStatus;                                                    //0x3f8
     UCHAR ChannelOrdering[1];                                               //0x3f9

@@ -22,14 +22,7 @@ struct _DEVICE_OBJECT_POWER_EXTENSION
     enum<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/RTM/_DEVICE_POWER_STATE'> _DEVICE_POWER_STATE</a> IdleState;                                     //0x34
     enum<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/RTM/_DEVICE_POWER_STATE'> _DEVICE_POWER_STATE</a> CurrentState;                                  //0x38
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/RTM/_LIST_ENTRY'>_LIST_ENTRY</a> Volume;                                              //0x40
-    union
-    {
-        struct
-        {
-            ULONG IdleTime;                                                 //0x50
-            ULONG NonIdleTime;                                              //0x54
-        } Disk;                                                             //0x50
-    } Specific;                                                             //0x50
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/RTM/<unnamed-tag>'> <unnamed-tag></a> Specific;                                                      //0x50
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 8.1 | 2012R2/RTM/_DEVOBJ_EXTENSION" tabindex="-1" class="related">_DEVOBJ_EXTENSION</a></li></ul></div><!--else.block
 script.
     if($(".container.mainblock-content.main-tdata-sm").height() < 600)

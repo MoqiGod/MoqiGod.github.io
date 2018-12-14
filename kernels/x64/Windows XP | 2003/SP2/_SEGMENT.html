@@ -20,16 +20,8 @@ struct _SEGMENT
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_MMEXTEND_INFO'> _MMEXTEND_INFO</a>* ExtendInfo;                                      //0x30
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_SEGMENT_FLAGS'>_SEGMENT_FLAGS</a> SegmentFlags;                                     //0x38
     VOID* BasedAddress;                                                     //0x40
-    union
-    {
-        ULONGLONG ImageCommitment;                                          //0x48
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_EPROCESS'> _EPROCESS</a>* CreatingProcess;                                  //0x48
-    } u1;                                                                   //0x48
-    union
-    {
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_SECTION_IMAGE_INFORMATION'> _SECTION_IMAGE_INFORMATION</a>* ImageInformation;                //0x50
-        VOID* FirstMappedVa;                                                //0x50
-    } u2;                                                                   //0x50
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x48
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/<unnamed-tag>'> <unnamed-tag></a> u2;                                                            //0x50
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_MMPTE'> _MMPTE</a>* PrototypePte;                                            //0x58
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_MMPTE'>_MMPTE</a> ThePtes[1];                                               //0x60
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows XP | 2003/SP2/_CONTROL_AREA" tabindex="-1" class="related">_CONTROL_AREA</a>,&nbsp;<a href="/kernels/x64/Windows XP | 2003/SP2/_LARGE_CONTROL_AREA" tabindex="-1" class="related">_LARGE_CONTROL_AREA</a></li></ul></div><!--else.block

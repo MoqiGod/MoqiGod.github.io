@@ -12,11 +12,7 @@ struct _MMMOD_WRITER_MDL_ENTRY
 {
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_LIST_ENTRY'>_LIST_ENTRY</a> Links;                                               //0x0
     union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_LARGE_INTEGER'> _LARGE_INTEGER</a> WriteOffset;                                       //0x10
-    union
-    {
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_IO_STATUS_BLOCK'>_IO_STATUS_BLOCK</a> IoStatus;                                   //0x18
-        union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_LARGE_INTEGER'> _LARGE_INTEGER</a> LastByte;                                      //0x18
-    } u;                                                                    //0x18
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x18
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_IRP'> _IRP</a>* Irp;                                                       //0x28
     ULONGLONG LastPageToWrite;                                              //0x30
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_MMMOD_WRITER_LISTHEAD'> _MMMOD_WRITER_LISTHEAD</a>* PagingListHead;                          //0x38

@@ -11,14 +11,7 @@ button.button-part(type="button" tabindex="-1" class="dropdown-toggle dropdown-t
 struct _PPM_IDLE_STATES
 {
     ULONG Count;                                                            //0x0
-    union
-    {
-        ULONG AsULONG;                                                      //0x4
-        ULONG AllowScaling:1;                                               //0x4
-        ULONG Disabled:1;                                                   //0x4
-        ULONG HvMaxCState:4;                                                //0x4
-        ULONG Reserved:26;                                                  //0x4
-    } Flags;                                                                //0x4
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/<unnamed-tag>'> <unnamed-tag></a> Flags;                                                         //0x4
     ULONG TargetState;                                                      //0x8
     ULONG ActualState;                                                      //0xc
     ULONG OldState;                                                         //0x10

@@ -16,50 +16,13 @@ struct _CONTROL_AREA
     ULONG NumberOfPfnReferences;                                            //0x10
     ULONG NumberOfMappedViews;                                              //0x14
     ULONG NumberOfUserReferences;                                           //0x18
-    union
-    {
-        ULONG LongFlags;                                                    //0x1c
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP1/_MMSECTION_FLAGS'>_MMSECTION_FLAGS</a> Flags;                                      //0x1c
-    } u;                                                                    //0x1c
-    union
-    {
-        struct
-        {
-            USHORT ModifiedWriteCount;                                      //0x20
-            USHORT FlushInProgressCount;                                    //0x22
-        } e2;                                                               //0x20
-    } u1;                                                                   //0x20
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP1/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x1c
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP1/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x20
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP1/_EX_FAST_REF'>_EX_FAST_REF</a> FilePointer;                                        //0x24
     volatile LONG ControlAreaLock;                                          //0x28
     ULONG StartingFrame;                                                    //0x2c
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP1/_MI_SECTION_CREATION_GATE'> _MI_SECTION_CREATION_GATE</a>* WaitingForDeletion;                   //0x30
-    union
-    {
-        struct
-        {
-            union
-            {
-                ULONG NumberOfSystemCacheViews;                             //0x34
-                ULONG ImageRelocationStartBit;                              //0x34
-            }
-            union
-            {
-                volatile LONG WritableUserReferences;                       //0x38
-                struct
-                {
-                    ULONG ImageRelocationSizeIn64k:16;                      //0x38
-                    ULONG Unused:14;                                        //0x38
-                    ULONG BitMap64:1;                                       //0x38
-                    ULONG ImageActive:1;                                    //0x38
-                }
-            }
-            union
-            {
-                struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP1/_MM_SUBSECTION_AVL_TABLE'> _MM_SUBSECTION_AVL_TABLE</a>* SubsectionRoot;            //0x3c
-                struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP1/_MI_IMAGE_SECURITY_REFERENCE'> _MI_IMAGE_SECURITY_REFERENCE</a>* SeImageStub;           //0x3c
-            }
-        } e2;                                                               //0x34
-    } u2;                                                                   //0x34
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP1/<unnamed-tag>'> <unnamed-tag></a> u2;                                                            //0x34
     volatile LONGLONG LockedPages;                                          //0x40
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x86/Windows Vista | 2008/SP1/_MAPPED_FILE_SEGMENT" tabindex="-1" class="related">_MAPPED_FILE_SEGMENT</a>,&nbsp;<a href="/kernels/x86/Windows Vista | 2008/SP1/_MMMOD_WRITER_MDL_ENTRY" tabindex="-1" class="related">_MMMOD_WRITER_MDL_ENTRY</a>,&nbsp;<a href="/kernels/x86/Windows Vista | 2008/SP1/_MMVIEW" tabindex="-1" class="related">_MMVIEW</a>,&nbsp;<a href="/kernels/x86/Windows Vista | 2008/SP1/_MSUBSECTION" tabindex="-1" class="related">_MSUBSECTION</a>,&nbsp;<a href="/kernels/x86/Windows Vista | 2008/SP1/_SEGMENT" tabindex="-1" class="related">_SEGMENT</a>,&nbsp;<a href="/kernels/x86/Windows Vista | 2008/SP1/_SEGMENT_OBJECT" tabindex="-1" class="related">_SEGMENT_OBJECT</a>,&nbsp;<a href="/kernels/x86/Windows Vista | 2008/SP1/_SUBSECTION" tabindex="-1" class="related">_SUBSECTION</a></li></ul></div><!--else.block
 script.

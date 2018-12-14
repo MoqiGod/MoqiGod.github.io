@@ -10,50 +10,14 @@ button.button-part(type="button" tabindex="-1" class="dropdown-toggle dropdown-t
 })();</script><pre><code style="min-height: 300px; padding-left: 0px;" class="c"><button id="copy-button" data-clipboard-target="#copyblock" tabindex="-1" data-clipboard-action="copy" class="button btn-info">copy</button><div id="copyblock">//0x30 bytes (sizeof)
 struct _MMPFN
 {
-    union
-    {
-        ULONGLONG Flink;                                                    //0x0
-        ULONG WsIndex;                                                      //0x0
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_KEVENT'> _KEVENT</a>* Event;                                              //0x0
-        VOID* Next;                                                         //0x0
-        VOID* volatile VolatileNext;                                        //0x0
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_KTHREAD'> _KTHREAD</a>* KernelStackOwner;                                  //0x0
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_SINGLE_LIST_ENTRY'>_SINGLE_LIST_ENTRY</a> NextStackPfn;                             //0x0
-    } u1;                                                                   //0x0
-    union
-    {
-        ULONGLONG Blink;                                                    //0x8
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_MMPTE'> _MMPTE</a>* ImageProtoPte;                                       //0x8
-        ULONGLONG ShareCount;                                               //0x8
-    } u2;                                                                   //0x8
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x0
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/<unnamed-tag>'> <unnamed-tag></a> u2;                                                            //0x8
     union
     {
         struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_MMPTE'> _MMPTE</a>* PteAddress;                                          //0x10
         VOID* volatile VolatilePteAddress;                                  //0x10
     }
-    union
-    {
-        struct
-        {
-            USHORT ReferenceCount;                                          //0x18
-            struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_MMPFNENTRY'>_MMPFNENTRY</a> e1;                                          //0x1a
-        };
-        struct
-        {
-            union
-            {
-                USHORT ReferenceCount;                                      //0x18
-                volatile SHORT VolatileReferenceCount;                      //0x18
-            }
-            USHORT ShortFlags;                                              //0x1a
-        } e2;                                                               //0x18
-        struct
-        {
-            USHORT ReferenceCount;                                          //0x18
-            UCHAR ByteFlags;                                                //0x1a
-            UCHAR InterlockedByteFlags;                                     //0x1b
-        } e3;                                                               //0x18
-    } u3;                                                                   //0x18
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/<unnamed-tag>'> <unnamed-tag></a> u3;                                                            //0x18
     USHORT UsedPageTableEntries;                                            //0x1c
     UCHAR VaType;                                                           //0x1e
     UCHAR ViewCount;                                                        //0x1f
@@ -62,13 +26,5 @@ struct _MMPFN
         struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_MMPTE'>_MMPTE</a> OriginalPte;                                          //0x20
         volatile LONG AweReferenceCount;                                    //0x20
     }
-    union
-    {
-        ULONGLONG PteFrame:52;                                              //0x28
-        ULONGLONG Unused:3;                                                 //0x28
-        ULONGLONG PfnImageVerified:1;                                       //0x28
-        ULONGLONG AweAllocation:1;                                          //0x28
-        ULONGLONG PrototypePte:1;                                           //0x28
-        ULONGLONG PageColor:6;                                              //0x28
-    } u4;                                                                   //0x28
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/<unnamed-tag>'> <unnamed-tag></a> u4;                                                            //0x28
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"></div></div></div><footer class="container-fluid footer-fluid"><div class="container"><div class="row"><div class="col-md-12 footer-style"><a href="/terms" tabindex="-1" class="footer_link"><strong>Terms of Service&nbsp;</strong></a><span style="color: #262633">|</span><a href="/privacy" tabindex="-1" class="footer_link"><strong>&nbsp;Privacy Policy&nbsp;</strong></a><span style="color: #262633">|<a href="https://github.com/RevJay/vergilius-project/issues" tabindex="-1" class="footer_link"><strong>&nbsp;Report a Bug &nbsp;</strong></a></span><span style="color: #262633">|</span>&nbsp;© 2018 Copyright: <a href="https://github.com/RevJay" tabindex="-1" class="footer_link"><strong>RevJay&nbsp;</strong></a></div></div></div></footer></body></html>

@@ -16,59 +16,16 @@ struct _CONTROL_AREA
     ULONGLONG NumberOfPfnReferences;                                        //0x20
     ULONGLONG NumberOfMappedViews;                                          //0x28
     ULONGLONG NumberOfUserReferences;                                       //0x30
-    union
-    {
-        ULONG LongFlags;                                                    //0x38
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/_MMSECTION_FLAGS'>_MMSECTION_FLAGS</a> Flags;                                      //0x38
-    } u;                                                                    //0x38
-    union
-    {
-        ULONG LongFlags;                                                    //0x3c
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/_MMSECTION_FLAGS2'>_MMSECTION_FLAGS2</a> Flags;                                     //0x3c
-    } u1;                                                                   //0x3c
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x38
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x3c
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/_EX_FAST_REF'>_EX_FAST_REF</a> FilePointer;                                        //0x40
     volatile LONG ControlAreaLock;                                          //0x48
     ULONG ModifiedWriteCount;                                               //0x4c
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/_MI_CONTROL_AREA_WAIT_BLOCK'> _MI_CONTROL_AREA_WAIT_BLOCK</a>* WaitList;                           //0x50
-    union
-    {
-        struct
-        {
-            union
-            {
-                ULONG NumberOfSystemCacheViews;                             //0x58
-                ULONG ImageRelocationStartBit;                              //0x58
-            }
-            union
-            {
-                volatile LONG WritableUserReferences;                       //0x5c
-                struct
-                {
-                    ULONG ImageRelocationSizeIn64k:16;                      //0x5c
-                    ULONG Unused:9;                                         //0x5c
-                    ULONG SystemImage:1;                                    //0x5c
-                    ULONG StrongCode:2;                                     //0x5c
-                    ULONG CantMove:1;                                       //0x5c
-                    ULONG BitMap:2;                                         //0x5c
-                    ULONG ImageActive:1;                                    //0x5c
-                }
-            }
-            union
-            {
-                ULONG FlushInProgressCount;                                 //0x60
-                ULONG NumberOfSubsections;                                  //0x60
-                struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/_MI_IMAGE_SECURITY_REFERENCE'> _MI_IMAGE_SECURITY_REFERENCE</a>* SeImageStub;           //0x60
-            }
-        } e2;                                                               //0x58
-    } u2;                                                                   //0x58
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/<unnamed-tag>'> <unnamed-tag></a> u2;                                                            //0x58
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/_EX_PUSH_LOCK'>_EX_PUSH_LOCK</a> FileObjectLock;                                    //0x68
     volatile ULONGLONG LockedPages;                                         //0x70
-    union
-    {
-        ULONGLONG IoAttributionContext:61;                                  //0x78
-        ULONGLONG Spare:3;                                                  //0x78
-        ULONGLONG SpareImage;                                               //0x78
-    } u3;                                                                   //0x78
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/<unnamed-tag>'> <unnamed-tag></a> u3;                                                            //0x78
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/_MAPPED_FILE_SEGMENT" tabindex="-1" class="related">_MAPPED_FILE_SEGMENT</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/_MI_SECTION_STATE" tabindex="-1" class="related">_MI_SECTION_STATE</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/_MMINPAGE_SUPPORT" tabindex="-1" class="related">_MMINPAGE_SUPPORT</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/_MMMOD_WRITER_MDL_ENTRY" tabindex="-1" class="related">_MMMOD_WRITER_MDL_ENTRY</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/_SECTION" tabindex="-1" class="related">_SECTION</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/_SEGMENT" tabindex="-1" class="related">_SEGMENT</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1607 Redstone 1 (Anniversary Update)/_SUBSECTION" tabindex="-1" class="related">_SUBSECTION</a></li></ul></div><!--else.block
 script.
     if($(".container.mainblock-content.main-tdata-sm").height() < 600)

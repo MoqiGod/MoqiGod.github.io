@@ -17,33 +17,14 @@ struct _INTERRUPT_VECTOR_DATA
     enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_KINTERRUPT_MODE'> _KINTERRUPT_MODE</a> Mode;                                             //0x10
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_GROUP_AFFINITY'>_GROUP_AFFINITY</a> TargetProcessors;                                //0x14
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_INTERRUPT_REMAPPING_INFO'>_INTERRUPT_REMAPPING_INFO</a> IntRemapInfo;                          //0x20
-    struct
-    {
-        ULONG Gsiv;                                                         //0x30
-        ULONG WakeInterrupt:1;                                              //0x34
-        ULONG ReservedFlags:31;                                             //0x34
-    } ControllerInput;                                                      //0x30
+    struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/<unnamed-tag>'><unnamed-tag></a> ControllerInput;                                              //0x30
     ULONGLONG HvDeviceId;                                                   //0x38
     union
     {
-        struct
-        {
-            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_LARGE_INTEGER'> _LARGE_INTEGER</a> Address;                                   //0x40
-            ULONG DataPayload;                                              //0x48
-        } XapicMessage;                                                     //0x40
-        struct
-        {
-            struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_INTERRUPT_HT_INTR_INFO'>_INTERRUPT_HT_INTR_INFO</a> IntrInfo;                        //0x40
-        } Hypertransport;                                                   //0x40
-        struct
-        {
-            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_LARGE_INTEGER'> _LARGE_INTEGER</a> Address;                                   //0x40
-            ULONG DataPayload;                                              //0x48
-        } GenericMessage;                                                   //0x40
-        struct
-        {
-            enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/HAL_APIC_DESTINATION_MODE'> HAL_APIC_DESTINATION_MODE</a> DestinationMode;                 //0x40
-        } MessageRequest;                                                   //0x40
+        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/<unnamed-tag>'><unnamed-tag></a> XapicMessage;                                             //0x40
+        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/<unnamed-tag>'><unnamed-tag></a> Hypertransport;                                           //0x40
+        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/<unnamed-tag>'><unnamed-tag></a> GenericMessage;                                           //0x40
+        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/<unnamed-tag>'><unnamed-tag></a> MessageRequest;                                           //0x40
     }
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/HAL_PRIVATE_DISPATCH" tabindex="-1" class="related">HAL_PRIVATE_DISPATCH</a>,&nbsp;<a href="/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_INTERRUPT_CONNECTION_DATA" tabindex="-1" class="related">_INTERRUPT_CONNECTION_DATA</a></li></ul></div><!--else.block
 script.

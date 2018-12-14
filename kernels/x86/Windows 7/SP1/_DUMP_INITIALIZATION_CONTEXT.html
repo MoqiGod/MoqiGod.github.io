@@ -28,18 +28,7 @@ struct _DUMP_INITIALIZATION_CONTEXT
     VOID* TargetAddress;                                                    //0x50
     LONG (*WritePendingRoutine)(LONG arg1, union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/_LARGE_INTEGER'> _LARGE_INTEGER</a>* arg2, struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/_MDL'> _MDL</a>* arg3, VOID* arg4); //0x54
     ULONG PartitionStyle;                                                   //0x58
-    union
-    {
-        struct
-        {
-            ULONG Signature;                                                //0x5c
-            ULONG CheckSum;                                                 //0x60
-        } Mbr;                                                              //0x5c
-        struct
-        {
-            struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/_GUID'>_GUID</a> DiskId;                                            //0x5c
-        } Gpt;                                                              //0x5c
-    } DiskInfo;                                                             //0x5c
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/<unnamed-tag>'> <unnamed-tag></a> DiskInfo;                                                      //0x5c
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x86/Windows 7/SP1/_DUMP_STACK_CONTEXT" tabindex="-1" class="related">_DUMP_STACK_CONTEXT</a></li></ul></div><!--else.block
 script.
     if($(".container.mainblock-content.main-tdata-sm").height() < 600)

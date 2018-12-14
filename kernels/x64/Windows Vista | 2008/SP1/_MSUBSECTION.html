@@ -23,18 +23,10 @@ struct _MSUBSECTION
         ULONG UnusedPtes;                                                   //0x20
         struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_MM_AVL_TABLE'> _MM_AVL_TABLE</a>* GlobalPerSessionHead;                         //0x20
     }
-    union
-    {
-        ULONG LongFlags;                                                    //0x28
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_MMSUBSECTION_FLAGS'>_MMSUBSECTION_FLAGS</a> SubsectionFlags;                         //0x28
-    } u;                                                                    //0x28
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x28
     ULONG StartingSector;                                                   //0x2c
     ULONG NumberOfFullSectors;                                              //0x30
-    union
-    {
-        LONGLONG Balance:2;                                                 //0x38
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_MMSUBSECTION_NODE'> _MMSUBSECTION_NODE</a>* Parent;                                  //0x38
-    } u1;                                                                   //0x38
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x38
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_MMSUBSECTION_NODE'> _MMSUBSECTION_NODE</a>* LeftChild;                                   //0x40
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_MMSUBSECTION_NODE'> _MMSUBSECTION_NODE</a>* RightChild;                                  //0x48
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_LIST_ENTRY'>_LIST_ENTRY</a> DereferenceList;                                     //0x50

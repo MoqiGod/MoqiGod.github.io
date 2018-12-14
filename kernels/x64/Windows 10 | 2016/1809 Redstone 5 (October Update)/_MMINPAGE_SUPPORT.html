@@ -16,27 +16,15 @@ struct _MMINPAGE_SUPPORT
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_KEVENT'>_KEVENT</a> CollidedEvent;                                           //0x38
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_IO_STATUS_BLOCK'>_IO_STATUS_BLOCK</a> IoStatus;                                       //0x50
     union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_LARGE_INTEGER'> _LARGE_INTEGER</a> ReadOffset;                                        //0x60
-    union
-    {
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_KAPC_STATE'>_KAPC_STATE</a> ApcState;                                        //0x68
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_MI_HARD_FAULT_STATE'>_MI_HARD_FAULT_STATE</a> HardFaultState;                         //0x68
-    } u2;                                                                   //0x68
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/<unnamed-tag>'> <unnamed-tag></a> u2;                                                            //0x68
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_ETHREAD'> _ETHREAD</a>* Thread;                                                //0x98
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_MMPFN'> _MMPFN</a>* LockedProtoPfn;                                          //0xa0
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_MMPTE'>_MMPTE</a> PteContents;                                              //0xa8
     volatile LONG WaitCount;                                                //0xb0
     volatile LONG InjectRetry;                                              //0xb4
     ULONG ByteCount;                                                        //0xb8
-    union
-    {
-        ULONG ImagePteOffset;                                               //0xbc
-        ULONG TossPage;                                                     //0xbc
-    } u3;                                                                   //0xbc
-    union
-    {
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_MMINPAGE_FLAGS'>_MMINPAGE_FLAGS</a> e1;                                          //0xc0
-        ULONG LongFlags;                                                    //0xc0
-    } u1;                                                                   //0xc0
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/<unnamed-tag>'> <unnamed-tag></a> u3;                                                            //0xbc
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0xc0
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_FILE_OBJECT'> _FILE_OBJECT</a>* FilePointer;                                       //0xc8
     union
     {

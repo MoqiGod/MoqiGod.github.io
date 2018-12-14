@@ -12,11 +12,7 @@ struct _MM_SESSION_SPACE
 {
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_MM_SESSION_SPACE'> _MM_SESSION_SPACE</a>* GlobalVirtualAddress;                         //0x0
     LONG ReferenceCount;                                                    //0x8
-    union
-    {
-        ULONG LongFlags;                                                    //0xc
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_MM_SESSION_SPACE_FLAGS'>_MM_SESSION_SPACE_FLAGS</a> Flags;                               //0xc
-    } u;                                                                    //0xc
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0xc
     ULONG SessionId;                                                        //0x10
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_LIST_ENTRY'>_LIST_ENTRY</a> ProcessList;                                         //0x18
     union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_LARGE_INTEGER'> _LARGE_INTEGER</a> LastProcessSwappedOutTime;                         //0x28

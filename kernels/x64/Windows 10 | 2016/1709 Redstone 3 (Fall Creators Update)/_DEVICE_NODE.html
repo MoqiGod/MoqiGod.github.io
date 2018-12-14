@@ -57,25 +57,12 @@ struct _DEVICE_NODE
     USHORT QueryTranslatorMask;                                             //0x20a
     USHORT NoArbiterMask;                                                   //0x20c
     USHORT QueryArbiterMask;                                                //0x20e
-    union
-    {
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/_DEVICE_NODE'> _DEVICE_NODE</a>* LegacyDeviceNode;                              //0x210
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/_DEVICE_RELATIONS'> _DEVICE_RELATIONS</a>* PendingDeviceRelations;                   //0x210
-        VOID* Information;                                                  //0x210
-    } OverUsed1;                                                            //0x210
-    union
-    {
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/_DEVICE_NODE'> _DEVICE_NODE</a>* NextResourceDeviceNode;                        //0x218
-    } OverUsed2;                                                            //0x218
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/<unnamed-tag>'> <unnamed-tag></a> OverUsed1;                                                     //0x210
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/<unnamed-tag>'> <unnamed-tag></a> OverUsed2;                                                     //0x218
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/_CM_RESOURCE_LIST'> _CM_RESOURCE_LIST</a>* BootResources;                                //0x220
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/_CM_RESOURCE_LIST'> _CM_RESOURCE_LIST</a>* BootResourcesTranslated;                      //0x228
     ULONG CapabilityFlags;                                                  //0x230
-    struct
-    {
-        enum<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/PROFILE_STATUS'> PROFILE_STATUS</a> DockStatus;                                     //0x238
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/_LIST_ENTRY'>_LIST_ENTRY</a> ListEntry;                                       //0x240
-        WCHAR* SerialNumber;                                                //0x250
-    } DockInfo;                                                             //0x238
+    struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/<unnamed-tag>'><unnamed-tag></a> DockInfo;                                                     //0x238
     ULONG DisableableDepends;                                               //0x258
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/_LIST_ENTRY'>_LIST_ENTRY</a> PendedSetInterfaceState;                             //0x260
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/_LIST_ENTRY'>_LIST_ENTRY</a> LegacyBusListEntry;                                  //0x270

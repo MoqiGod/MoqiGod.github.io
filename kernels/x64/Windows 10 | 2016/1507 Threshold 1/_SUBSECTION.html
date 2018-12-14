@@ -19,18 +19,11 @@ struct _SUBSECTION
         struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_RTL_AVL_TREE'>_RTL_AVL_TREE</a> GlobalPerSessionHead;                          //0x18
         struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_MI_PER_SESSION_PROTOS'> _MI_PER_SESSION_PROTOS</a>* SessionDriverProtos;                 //0x18
     }
-    union
-    {
-        ULONG LongFlags;                                                    //0x20
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_MMSUBSECTION_FLAGS'>_MMSUBSECTION_FLAGS</a> SubsectionFlags;                         //0x20
-    } u;                                                                    //0x20
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x20
     ULONG StartingSector;                                                   //0x24
     ULONG NumberOfFullSectors;                                              //0x28
     ULONG PtesInSubsection;                                                 //0x2c
-    union
-    {
-        ULONG NumberOfChildViews;                                           //0x30
-    } u1;                                                                   //0x30
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x30
     union
     {
         ULONG UnusedPtes;                                                   //0x34

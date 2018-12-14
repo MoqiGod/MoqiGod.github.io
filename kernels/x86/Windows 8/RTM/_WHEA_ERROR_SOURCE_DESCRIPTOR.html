@@ -20,19 +20,7 @@ struct _WHEA_ERROR_SOURCE_DESCRIPTOR
     ULONG ErrorSourceId;                                                    //0x1c
     ULONG PlatformErrorSourceId;                                            //0x20
     ULONG Flags;                                                            //0x24
-    union
-    {
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_WHEA_XPF_MCE_DESCRIPTOR'>_WHEA_XPF_MCE_DESCRIPTOR</a> XpfMceDescriptor;                   //0x28
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_WHEA_XPF_CMC_DESCRIPTOR'>_WHEA_XPF_CMC_DESCRIPTOR</a> XpfCmcDescriptor;                   //0x28
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_WHEA_XPF_NMI_DESCRIPTOR'>_WHEA_XPF_NMI_DESCRIPTOR</a> XpfNmiDescriptor;                   //0x28
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_WHEA_IPF_MCA_DESCRIPTOR'>_WHEA_IPF_MCA_DESCRIPTOR</a> IpfMcaDescriptor;                   //0x28
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_WHEA_IPF_CMC_DESCRIPTOR'>_WHEA_IPF_CMC_DESCRIPTOR</a> IpfCmcDescriptor;                   //0x28
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_WHEA_IPF_CPE_DESCRIPTOR'>_WHEA_IPF_CPE_DESCRIPTOR</a> IpfCpeDescriptor;                   //0x28
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_WHEA_AER_ROOTPORT_DESCRIPTOR'>_WHEA_AER_ROOTPORT_DESCRIPTOR</a> AerRootportDescriptor;         //0x28
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_WHEA_AER_ENDPOINT_DESCRIPTOR'>_WHEA_AER_ENDPOINT_DESCRIPTOR</a> AerEndpointDescriptor;         //0x28
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_WHEA_AER_BRIDGE_DESCRIPTOR'>_WHEA_AER_BRIDGE_DESCRIPTOR</a> AerBridgeDescriptor;             //0x28
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_WHEA_GENERIC_ERROR_DESCRIPTOR'>_WHEA_GENERIC_ERROR_DESCRIPTOR</a> GenErrDescriptor;             //0x28
-    } Info;                                                                 //0x28
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/<unnamed-tag>'> <unnamed-tag></a> Info;                                                          //0x28
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x86/Windows 8/RTM/_WHEAP_ERROR_SOURCE" tabindex="-1" class="related">_WHEAP_ERROR_SOURCE</a></li></ul></div><!--else.block
 script.
     if($(".container.mainblock-content.main-tdata-sm").height() < 600)

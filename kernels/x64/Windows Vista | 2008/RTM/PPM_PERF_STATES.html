@@ -22,15 +22,7 @@ struct PPM_PERF_STATES
     UCHAR ThrottleStatesOnly;                                               //0x1e
     UCHAR PolicyType;                                                       //0x1f
     ULONG TimerInterval;                                                    //0x20
-    union
-    {
-        ULONG AsULONG;                                                      //0x24
-        ULONG UsingHypervisor:1;                                            //0x24
-        ULONG NoDomainAccounting:1;                                         //0x24
-        ULONG IncreasePolicy:2;                                             //0x24
-        ULONG DecreasePolicy:2;                                             //0x24
-        ULONG Reserved:26;                                                  //0x24
-    } Flags;                                                                //0x24
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/RTM/<unnamed-tag>'> <unnamed-tag></a> Flags;                                                         //0x24
     ULONGLONG TargetProcessors;                                             //0x28
     LONG (*PStateHandler)(ULONGLONG arg1, ULONGLONG arg2, ULONGLONG arg3);  //0x30
     ULONGLONG PStateContext;                                                //0x38

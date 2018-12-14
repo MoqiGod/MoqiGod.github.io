@@ -12,24 +12,7 @@ struct _CM_DIRTY_VECTOR_LOG_ENTRY
 {
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1803 Redstone 4 (Spring Creators Update)/_ETHREAD'> _ETHREAD</a>* Thread;                                                //0x0
     enum<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1803 Redstone 4 (Spring Creators Update)/_CM_DIRTY_VECTOR_OPERATION'> _CM_DIRTY_VECTOR_OPERATION</a> Operation;                              //0x8
-    union
-    {
-        struct
-        {
-            ULONG Start;                                                    //0xc
-            ULONG Length;                                                   //0x10
-        } DirtyVectorModifiedContext;                                       //0xc
-        struct
-        {
-            ULONG RangeCount;                                               //0xc
-            ULONG SetBitCount;                                              //0x10
-        } DirtyDataCaptureContext;                                          //0xc
-        struct
-        {
-            ULONG Context1;                                                 //0xc
-            ULONG Context2;                                                 //0x10
-        } Raw;                                                              //0xc
-    } Data;                                                                 //0xc
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1803 Redstone 4 (Spring Creators Update)/<unnamed-tag>'> <unnamed-tag></a> Data;                                                          //0xc
     VOID* Stack[6];                                                         //0x18
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 10 | 2016/1803 Redstone 4 (Spring Creators Update)/_CM_DIRTY_VECTOR_LOG" tabindex="-1" class="related">_CM_DIRTY_VECTOR_LOG</a></li></ul></div><!--else.block
 script.

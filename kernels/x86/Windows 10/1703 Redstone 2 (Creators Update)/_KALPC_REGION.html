@@ -15,13 +15,7 @@ struct _KALPC_REGION
     ULONG Offset;                                                           //0xc
     ULONG Size;                                                             //0x10
     ULONG ViewSize;                                                         //0x14
-    union
-    {
-        struct
-        {
-            ULONG Secure:1;                                                 //0x18
-        } s1;                                                               //0x18
-    } u1;                                                                   //0x18
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1703 Redstone 2 (Creators Update)/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x18
     ULONG NumberOfViews;                                                    //0x1c
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1703 Redstone 2 (Creators Update)/_LIST_ENTRY'>_LIST_ENTRY</a> ViewListHead;                                        //0x20
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1703 Redstone 2 (Creators Update)/_KALPC_VIEW'> _KALPC_VIEW</a>* ReadOnlyView;                                       //0x28

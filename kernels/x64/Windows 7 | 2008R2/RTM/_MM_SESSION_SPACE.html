@@ -11,11 +11,7 @@ button.button-part(type="button" tabindex="-1" class="dropdown-toggle dropdown-t
 struct _MM_SESSION_SPACE
 {
     volatile LONG ReferenceCount;                                           //0x0
-    union
-    {
-        ULONG LongFlags;                                                    //0x4
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/RTM/_MM_SESSION_SPACE_FLAGS'>_MM_SESSION_SPACE_FLAGS</a> Flags;                               //0x4
-    } u;                                                                    //0x4
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/RTM/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x4
     ULONG SessionId;                                                        //0x8
     volatile LONG ProcessReferenceToSession;                                //0xc
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/RTM/_LIST_ENTRY'>_LIST_ENTRY</a> ProcessList;                                         //0x10

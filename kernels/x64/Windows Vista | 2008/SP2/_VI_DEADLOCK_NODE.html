@@ -20,14 +20,7 @@ struct _VI_DEADLOCK_NODE
     }
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP2/_VI_DEADLOCK_RESOURCE'> _VI_DEADLOCK_RESOURCE</a>* Root;                                     //0x38
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP2/_VI_DEADLOCK_THREAD'> _VI_DEADLOCK_THREAD</a>* ThreadEntry;                                //0x40
-    union
-    {
-        ULONG Active:1;                                                     //0x48
-        ULONG OnlyTryAcquireUsed:1;                                         //0x48
-        ULONG ReleasedOutOfOrder:1;                                         //0x48
-        ULONG SequenceNumber:29;                                            //0x48
-        ULONG Whole;                                                        //0x48
-    } u1;                                                                   //0x48
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP2/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x48
     LONG ChildrenCount;                                                     //0x4c
     VOID* StackTrace[8];                                                    //0x50
     VOID* ParentStackTrace[8];                                              //0x90

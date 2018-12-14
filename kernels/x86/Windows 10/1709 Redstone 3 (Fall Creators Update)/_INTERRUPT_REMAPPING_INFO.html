@@ -13,16 +13,7 @@ struct _INTERRUPT_REMAPPING_INFO
     ULONG IrtIndex:30;                                                      //0x0
     ULONG FlagHalInternal:1;                                                //0x0
     ULONG FlagTranslated:1;                                                 //0x0
-    union
-    {
-        struct
-        {
-            ULONG MessageAddressHigh;                                       //0x4
-            ULONG MessageAddressLow;                                        //0x8
-            USHORT MessageData;                                             //0xc
-            USHORT Reserved;                                                //0xe
-        } Msi;                                                              //0x4
-    } u;                                                                    //0x4
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1709 Redstone 3 (Fall Creators Update)/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x4
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x86/Windows 10/1709 Redstone 3 (Fall Creators Update)/_INTERRUPT_VECTOR_DATA" tabindex="-1" class="related">_INTERRUPT_VECTOR_DATA</a></li></ul></div><!--else.block
 script.
     if($(".container.mainblock-content.main-tdata-sm").height() < 600)

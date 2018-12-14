@@ -12,24 +12,6 @@ struct _WORK_QUEUE_ENTRY
 {
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_LIST_ENTRY'>_LIST_ENTRY</a> WorkQueueLinks;                                      //0x0
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_LIST_ENTRY'>_LIST_ENTRY</a> CoalescedWorkQueueLinks;                             //0x8
-    union
-    {
-        struct
-        {
-            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_FILE_OBJECT'> _FILE_OBJECT</a>* FileObject;                                //0x10
-        } Read;                                                             //0x10
-        struct
-        {
-            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_SHARED_CACHE_MAP'> _SHARED_CACHE_MAP</a>* SharedCacheMap;                       //0x10
-        } Write;                                                            //0x10
-        struct
-        {
-            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_KEVENT'> _KEVENT</a>* Event;                                          //0x10
-        } Event;                                                            //0x10
-        struct
-        {
-            ULONG Reason;                                                   //0x10
-        } Notification;                                                     //0x10
-    } Parameters;                                                           //0x10
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/<unnamed-tag>'> <unnamed-tag></a> Parameters;                                                    //0x10
     UCHAR Function;                                                         //0x14
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"></div></div></div><footer class="container-fluid footer-fluid"><div class="container"><div class="row"><div class="col-md-12 footer-style"><a href="/terms" tabindex="-1" class="footer_link"><strong>Terms of Service&nbsp;</strong></a><span style="color: #262633">|</span><a href="/privacy" tabindex="-1" class="footer_link"><strong>&nbsp;Privacy Policy&nbsp;</strong></a><span style="color: #262633">|<a href="https://github.com/RevJay/vergilius-project/issues" tabindex="-1" class="footer_link"><strong>&nbsp;Report a Bug &nbsp;</strong></a></span><span style="color: #262633">|</span>&nbsp;© 2018 Copyright: <a href="https://github.com/RevJay" tabindex="-1" class="footer_link"><strong>RevJay&nbsp;</strong></a></div></div></div></footer></body></html>

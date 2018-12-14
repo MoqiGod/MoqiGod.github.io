@@ -56,15 +56,7 @@ struct _KPROCESS
     ULONG ReadyTime;                                                        //0x274
     UCHAR Spare2[80];                                                       //0x278
     VOID* InstrumentationCallback;                                          //0x2c8
-    union
-    {
-        ULONGLONG SecureHandle;                                             //0x2d0
-        struct
-        {
-            ULONGLONG SecureProcess:1;                                      //0x2d0
-            ULONGLONG Unused:1;                                             //0x2d0
-        } Flags;                                                            //0x2d0
-    } SecureState;                                                          //0x2d0
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/<unnamed-tag>'> <unnamed-tag></a> SecureState;                                                   //0x2d0
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/_EPROCESS" tabindex="-1" class="related">_EPROCESS</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/_KAPC_STATE" tabindex="-1" class="related">_KAPC_STATE</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1709 Redstone 3 (Fall Creators Update)/_KTHREAD" tabindex="-1" class="related">_KTHREAD</a></li></ul></div><!--else.block
 script.
     if($(".container.mainblock-content.main-tdata-sm").height() < 600)

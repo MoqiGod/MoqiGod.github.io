@@ -16,14 +16,7 @@ struct _KALPC_SECTION
     VOID* SectionHandle;                                                    //0x18
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/RTM/_EPROCESS'> _EPROCESS</a>* OwnerProcess;                                         //0x20
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/RTM/_ALPC_PORT'> _ALPC_PORT</a>* OwnerPort;                                           //0x28
-    union
-    {
-        struct
-        {
-            ULONG Internal:1;                                               //0x30
-            ULONG Secure:1;                                                 //0x30
-        } s1;                                                               //0x30
-    } u1;                                                                   //0x30
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/RTM/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x30
     ULONG NumberOfRegions;                                                  //0x34
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/RTM/_LIST_ENTRY'>_LIST_ENTRY</a> RegionListHead;                                      //0x38
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 7 | 2008R2/RTM/_KALPC_REGION" tabindex="-1" class="related">_KALPC_REGION</a></li></ul></div><!--else.block

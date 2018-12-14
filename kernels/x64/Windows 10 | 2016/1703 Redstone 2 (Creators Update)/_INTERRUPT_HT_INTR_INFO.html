@@ -10,33 +10,8 @@ button.button-part(type="button" tabindex="-1" class="dropdown-toggle dropdown-t
 })();</script><pre><code style="min-height: 300px; padding-left: 0px;" class="c"><button id="copy-button" data-clipboard-target="#copyblock" tabindex="-1" data-clipboard-action="copy" class="button btn-info">copy</button><div id="copyblock">//0x8 bytes (sizeof)
 struct _INTERRUPT_HT_INTR_INFO
 {
-    union
-    {
-        struct
-        {
-            ULONG Mask:1;                                                   //0x0
-            ULONG Polarity:1;                                               //0x0
-            ULONG MessageType:3;                                            //0x0
-            ULONG RequestEOI:1;                                             //0x0
-            ULONG DestinationMode:1;                                        //0x0
-            ULONG MessageType3:1;                                           //0x0
-            ULONG Destination:8;                                            //0x0
-            ULONG Vector:8;                                                 //0x0
-            ULONG ExtendedAddress:8;                                        //0x0
-        } bits;                                                             //0x0
-        ULONG AsULONG;                                                      //0x0
-    } LowPart;                                                              //0x0
-    union
-    {
-        struct
-        {
-            ULONG ExtendedDestination:24;                                   //0x4
-            ULONG Reserved:6;                                               //0x4
-            ULONG PassPW:1;                                                 //0x4
-            ULONG WaitingForEOI:1;                                          //0x4
-        } bits;                                                             //0x4
-        ULONG AsULONG;                                                      //0x4
-    } HighPart;                                                             //0x4
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1703 Redstone 2 (Creators Update)/<unnamed-tag>'> <unnamed-tag></a> LowPart;                                                       //0x0
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1703 Redstone 2 (Creators Update)/<unnamed-tag>'> <unnamed-tag></a> HighPart;                                                      //0x4
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 10 | 2016/1703 Redstone 2 (Creators Update)/_INTERRUPT_VECTOR_DATA" tabindex="-1" class="related">_INTERRUPT_VECTOR_DATA</a></li></ul></div><!--else.block
 script.
     if($(".container.mainblock-content.main-tdata-sm").height() < 600)

@@ -23,15 +23,7 @@ struct _WHEA_ERROR_PACKET
     ULONG Reserved2;                                                        //0x30
     ULONG Version;                                                          //0x34
     ULONGLONG Cpu;                                                          //0x38
-    union
-    {
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_WHEA_GENERIC_PROCESSOR_ERROR'>_WHEA_GENERIC_PROCESSOR_ERROR</a> ProcessorError;                //0x40
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_WHEA_MEMORY_ERROR'>_WHEA_MEMORY_ERROR</a> MemoryError;                              //0x40
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_WHEA_NMI_ERROR'>_WHEA_NMI_ERROR</a> NmiError;                                    //0x40
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_WHEA_PCIEXPRESS_ERROR'>_WHEA_PCIEXPRESS_ERROR</a> PciExpressError;                      //0x40
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_WHEA_PCIXBUS_ERROR'>_WHEA_PCIXBUS_ERROR</a> PciXBusError;                            //0x40
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_WHEA_PCIXDEVICE_ERROR'>_WHEA_PCIXDEVICE_ERROR</a> PciXDeviceError;                      //0x40
-    } u;                                                                    //0x40
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x40
     enum<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_WHEA_RAW_DATA_FORMAT'> _WHEA_RAW_DATA_FORMAT</a> RawDataFormat;                               //0x110
     ULONG RawDataOffset;                                                    //0x114
     UCHAR RawData[1];                                                       //0x118

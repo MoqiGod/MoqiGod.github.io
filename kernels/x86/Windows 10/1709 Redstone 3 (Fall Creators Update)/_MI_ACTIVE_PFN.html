@@ -12,17 +12,8 @@ struct _MI_ACTIVE_PFN
 {
     union
     {
-        struct
-        {
-            ULONG Tradable:1;                                               //0x0
-            ULONG NonPagedBuddy:28;                                         //0x0
-        } Leaf;                                                             //0x0
-        struct
-        {
-            ULONG Tradable:1;                                               //0x0
-            ULONG WsleAge:3;                                                //0x0
-            ULONG NonPagedBuddy:28;                                         //0x0
-        } PageTable;                                                        //0x0
+        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1709 Redstone 3 (Fall Creators Update)/<unnamed-tag>'><unnamed-tag></a> Leaf;                                                     //0x0
+        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1709 Redstone 3 (Fall Creators Update)/<unnamed-tag>'><unnamed-tag></a> PageTable;                                                //0x0
         ULONG EntireActiveField;                                            //0x0
     }
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x86/Windows 10/1709 Redstone 3 (Fall Creators Update)/_MMPFN" tabindex="-1" class="related">_MMPFN</a></li></ul></div><!--else.block

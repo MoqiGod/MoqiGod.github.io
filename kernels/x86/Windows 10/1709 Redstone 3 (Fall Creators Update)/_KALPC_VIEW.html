@@ -18,16 +18,7 @@ struct _KALPC_VIEW
     ULONG Size;                                                             //0x18
     VOID* SecureViewHandle;                                                 //0x1c
     VOID* WriteAccessHandle;                                                //0x20
-    union
-    {
-        struct
-        {
-            ULONG WriteAccess:1;                                            //0x24
-            ULONG AutoRelease:1;                                            //0x24
-            ULONG ForceUnlink:1;                                            //0x24
-            ULONG SystemSpace:1;                                            //0x24
-        } s1;                                                               //0x24
-    } u1;                                                                   //0x24
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1709 Redstone 3 (Fall Creators Update)/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x24
     ULONG NumberOfOwnerMessages;                                            //0x28
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1709 Redstone 3 (Fall Creators Update)/_LIST_ENTRY'>_LIST_ENTRY</a> ProcessViewListEntry;                                //0x2c
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x86/Windows 10/1709 Redstone 3 (Fall Creators Update)/_KALPC_MESSAGE_ATTRIBUTES" tabindex="-1" class="related">_KALPC_MESSAGE_ATTRIBUTES</a>,&nbsp;<a href="/kernels/x86/Windows 10/1709 Redstone 3 (Fall Creators Update)/_KALPC_REGION" tabindex="-1" class="related">_KALPC_REGION</a></li></ul></div><!--else.block

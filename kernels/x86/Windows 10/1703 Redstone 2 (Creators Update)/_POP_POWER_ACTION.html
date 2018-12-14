@@ -32,12 +32,7 @@ struct _POP_POWER_ACTION
     ULONGLONG SleepTime;                                                    //0x48
     ULONGLONG WakeFirstUnattendedTime;                                      //0x50
     enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1703 Redstone 2 (Creators Update)/SYSTEM_POWER_CONDITION'> SYSTEM_POWER_CONDITION</a> WakeAlarmSignaled;                          //0x58
-    struct
-    {
-        ULONGLONG RequestedTime;                                            //0x60
-        ULONGLONG ProgrammedTime;                                           //0x68
-        struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1703 Redstone 2 (Creators Update)/_DIAGNOSTIC_BUFFER'> _DIAGNOSTIC_BUFFER</a>* TimerInfo;                               //0x70
-    } WakeAlarm[3];                                                         //0x60
+    struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1703 Redstone 2 (Creators Update)/<unnamed-tag>'><unnamed-tag></a> WakeAlarm[3];                                                 //0x60
     UCHAR WakeAlarmPaused;                                                  //0xa8
     ULONGLONG WakeAlarmLastTime;                                            //0xb0
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1703 Redstone 2 (Creators Update)/SYSTEM_POWER_CAPABILITIES'>SYSTEM_POWER_CAPABILITIES</a> FilteredCapabilities;                  //0xb8

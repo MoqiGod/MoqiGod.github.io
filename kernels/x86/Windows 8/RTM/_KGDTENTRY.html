@@ -12,29 +12,7 @@ struct _KGDTENTRY
 {
     USHORT LimitLow;                                                        //0x0
     USHORT BaseLow;                                                         //0x2
-    union
-    {
-        struct
-        {
-            UCHAR BaseMid;                                                  //0x4
-            UCHAR Flags1;                                                   //0x5
-            UCHAR Flags2;                                                   //0x6
-            UCHAR BaseHi;                                                   //0x7
-        } Bytes;                                                            //0x4
-        struct
-        {
-            ULONG BaseMid:8;                                                //0x4
-            ULONG Type:5;                                                   //0x4
-            ULONG Dpl:2;                                                    //0x4
-            ULONG Pres:1;                                                   //0x4
-            ULONG LimitHi:4;                                                //0x4
-            ULONG Sys:1;                                                    //0x4
-            ULONG Reserved_0:1;                                             //0x4
-            ULONG Default_Big:1;                                            //0x4
-            ULONG Granularity:1;                                            //0x4
-            ULONG BaseHi:8;                                                 //0x4
-        } Bits;                                                             //0x4
-    } HighWord;                                                             //0x4
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/<unnamed-tag>'> <unnamed-tag></a> HighWord;                                                      //0x4
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x86/Windows 8/RTM/_KPCR" tabindex="-1" class="related">_KPCR</a>,&nbsp;<a href="/kernels/x86/Windows 8/RTM/_KPROCESS" tabindex="-1" class="related">_KPROCESS</a></li></ul></div><!--else.block
 script.
     if($(".container.mainblock-content.main-tdata-sm").height() < 600)

@@ -19,11 +19,7 @@ struct _MI_NODE_INFORMATION
     ULONG MmShiftedColor;                                                   //0x48
     ULONG Color;                                                            //0x4c
     volatile ULONG ChannelFreeCount[1][2];                                  //0x50
-    struct
-    {
-        ULONG ChannelsHotCold:1;                                            //0x58
-        ULONG Spare:31;                                                     //0x58
-    } Flags;                                                                //0x58
+    struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1511 Threshold 2/<unnamed-tag>'><unnamed-tag></a> Flags;                                                        //0x58
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1511 Threshold 2/_EX_PUSH_LOCK'>_EX_PUSH_LOCK</a> NodeLock;                                          //0x5c
     UCHAR ChannelStatus;                                                    //0x60
     UCHAR ChannelOrdering[1];                                               //0x61

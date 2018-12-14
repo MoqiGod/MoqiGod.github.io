@@ -11,17 +11,7 @@ button.button-part(type="button" tabindex="-1" class="dropdown-toggle dropdown-t
 struct _LOADER_RESET_REASON
 {
     UCHAR Supplied;                                                         //0x0
-    union
-    {
-        struct
-        {
-            UCHAR Pch;                                                      //0x8
-            UCHAR EmbeddedController;                                       //0x9
-            UCHAR Reserved[6];                                              //0xa
-        } Component;                                                        //0x8
-        ULONGLONG AsULONG64;                                                //0x8
-        UCHAR AsBytes[8];                                                   //0x8
-    } Basic;                                                                //0x8
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/<unnamed-tag>'> <unnamed-tag></a> Basic;                                                         //0x8
     ULONG AdditionalInfo[8];                                                //0x10
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_LOADER_PARAMETER_EXTENSION" tabindex="-1" class="related">_LOADER_PARAMETER_EXTENSION</a></li></ul></div><!--else.block
 script.

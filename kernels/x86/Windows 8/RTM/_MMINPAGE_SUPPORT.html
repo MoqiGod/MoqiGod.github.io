@@ -21,16 +21,8 @@ struct _MMINPAGE_SUPPORT
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_MMPFN'> _MMPFN</a>* LockedProtoPfn;                                          //0x50
     volatile LONG WaitCount;                                                //0x54
     ULONG ByteCount;                                                        //0x58
-    union
-    {
-        ULONG ImagePteOffset;                                               //0x5c
-        ULONG TossPage;                                                     //0x5c
-    } u3;                                                                   //0x5c
-    union
-    {
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_MMINPAGE_FLAGS'>_MMINPAGE_FLAGS</a> e1;                                          //0x60
-        ULONG LongFlags;                                                    //0x60
-    } u1;                                                                   //0x60
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/<unnamed-tag>'> <unnamed-tag></a> u3;                                                            //0x5c
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x60
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_FILE_OBJECT'> _FILE_OBJECT</a>* FilePointer;                                       //0x64
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_CONTROL_AREA'> _CONTROL_AREA</a>* ControlArea;                                      //0x68
     VOID* FaultingAddress;                                                  //0x6c

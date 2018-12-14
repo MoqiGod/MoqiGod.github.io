@@ -23,16 +23,8 @@ struct _MMVAD_SHORT
     UCHAR SpareNT64VadUChar;                                                //0x23
     LONG ReferenceCount;                                                    //0x24
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1703 Redstone 2 (Creators Update)/_EX_PUSH_LOCK'>_EX_PUSH_LOCK</a> PushLock;                                          //0x28
-    union
-    {
-        ULONG LongFlags;                                                    //0x30
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1703 Redstone 2 (Creators Update)/_MMVAD_FLAGS'>_MMVAD_FLAGS</a> VadFlags;                                       //0x30
-    } u;                                                                    //0x30
-    union
-    {
-        ULONG LongFlags1;                                                   //0x34
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1703 Redstone 2 (Creators Update)/_MMVAD_FLAGS1'>_MMVAD_FLAGS1</a> VadFlags1;                                     //0x34
-    } u1;                                                                   //0x34
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1703 Redstone 2 (Creators Update)/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x30
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1703 Redstone 2 (Creators Update)/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x34
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1703 Redstone 2 (Creators Update)/_MI_VAD_EVENT_BLOCK'> _MI_VAD_EVENT_BLOCK</a>* EventList;                                  //0x38
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 10 | 2016/1703 Redstone 2 (Creators Update)/_MI_RFG_PROTECTED_STACK" tabindex="-1" class="related">_MI_RFG_PROTECTED_STACK</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1703 Redstone 2 (Creators Update)/_MI_SUB64K_FREE_RANGES" tabindex="-1" class="related">_MI_SUB64K_FREE_RANGES</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1703 Redstone 2 (Creators Update)/_MMVAD" tabindex="-1" class="related">_MMVAD</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1703 Redstone 2 (Creators Update)/_MMVAD_SHORT" tabindex="-1" class="related">_MMVAD_SHORT</a></li></ul></div><!--else.block
 script.

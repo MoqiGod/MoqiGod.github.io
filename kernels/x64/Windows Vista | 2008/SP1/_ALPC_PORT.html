@@ -35,28 +35,7 @@ struct _ALPC_PORT
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_ALPC_COMPLETION_LIST'> _ALPC_COMPLETION_LIST</a>* CompletionList;                           //0x140
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_ALPC_MESSAGE_ZONE'> _ALPC_MESSAGE_ZONE</a>* MessageZone;                                 //0x148
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_LIST_ENTRY'>_LIST_ENTRY</a> CanceledQueue;                                       //0x150
-    union
-    {
-        struct
-        {
-            ULONG Initialized:1;                                            //0x160
-            ULONG Type:2;                                                   //0x160
-            ULONG ConnectionPending:1;                                      //0x160
-            ULONG ConnectionRefused:1;                                      //0x160
-            ULONG Disconnected:1;                                           //0x160
-            ULONG Closed:1;                                                 //0x160
-            ULONG NoFlushOnClose:1;                                         //0x160
-            ULONG ReturnExtendedInfo:1;                                     //0x160
-            ULONG Waitable:1;                                               //0x160
-            ULONG DynamicSecurity:1;                                        //0x160
-            ULONG Wow64CompletionList:1;                                    //0x160
-            ULONG Lpc:1;                                                    //0x160
-            ULONG LpcToLpc:1;                                               //0x160
-            ULONG HasCompletionList:1;                                      //0x160
-            ULONG HadCompletionList:1;                                      //0x160
-        } s1;                                                               //0x160
-        ULONG State;                                                        //0x160
-    } u1;                                                                   //0x160
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x160
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_ALPC_PORT'> _ALPC_PORT</a>* TargetQueuePort;                                     //0x168
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_ALPC_PORT'> _ALPC_PORT</a>* TargetSequencePort;                                  //0x170
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_KALPC_MESSAGE'> _KALPC_MESSAGE</a>* Message;                                         //0x178

@@ -57,25 +57,12 @@ struct _DEVICE_NODE
     USHORT QueryTranslatorMask;                                             //0x15a
     USHORT NoArbiterMask;                                                   //0x15c
     USHORT QueryArbiterMask;                                                //0x15e
-    union
-    {
-        struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_DEVICE_NODE'> _DEVICE_NODE</a>* LegacyDeviceNode;                              //0x160
-        struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_DEVICE_RELATIONS'> _DEVICE_RELATIONS</a>* PendingDeviceRelations;                   //0x160
-        VOID* Information;                                                  //0x160
-    } OverUsed1;                                                            //0x160
-    union
-    {
-        struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_DEVICE_NODE'> _DEVICE_NODE</a>* NextResourceDeviceNode;                        //0x164
-    } OverUsed2;                                                            //0x164
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/<unnamed-tag>'> <unnamed-tag></a> OverUsed1;                                                     //0x160
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/<unnamed-tag>'> <unnamed-tag></a> OverUsed2;                                                     //0x164
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_CM_RESOURCE_LIST'> _CM_RESOURCE_LIST</a>* BootResources;                                //0x168
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_CM_RESOURCE_LIST'> _CM_RESOURCE_LIST</a>* BootResourcesTranslated;                      //0x16c
     ULONG CapabilityFlags;                                                  //0x170
-    struct
-    {
-        enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/PROFILE_STATUS'> PROFILE_STATUS</a> DockStatus;                                     //0x174
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_LIST_ENTRY'>_LIST_ENTRY</a> ListEntry;                                       //0x178
-        USHORT* SerialNumber;                                               //0x180
-    } DockInfo;                                                             //0x174
+    struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/<unnamed-tag>'><unnamed-tag></a> DockInfo;                                                     //0x174
     ULONG DisableableDepends;                                               //0x184
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_LIST_ENTRY'>_LIST_ENTRY</a> PendedSetInterfaceState;                             //0x188
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_LIST_ENTRY'>_LIST_ENTRY</a> LegacyBusListEntry;                                  //0x190

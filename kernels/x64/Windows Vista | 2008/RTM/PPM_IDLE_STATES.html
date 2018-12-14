@@ -12,13 +12,7 @@ struct PPM_IDLE_STATES
 {
     ULONG Type;                                                             //0x0
     ULONG Count;                                                            //0x4
-    union
-    {
-        ULONG AsULONG;                                                      //0x8
-        ULONG AllowScaling:1;                                               //0x8
-        ULONG Disabled:1;                                                   //0x8
-        ULONG Reserved:30;                                                  //0x8
-    } Flags;                                                                //0x8
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/RTM/<unnamed-tag>'> <unnamed-tag></a> Flags;                                                         //0x8
     ULONG TargetState;                                                      //0xc
     ULONG ActualState;                                                      //0x10
     ULONG OldState;                                                         //0x14

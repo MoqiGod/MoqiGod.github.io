@@ -11,11 +11,7 @@ button.button-part(type="button" tabindex="-1" class="dropdown-toggle dropdown-t
 struct _SUBSECTION
 {
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_CONTROL_AREA'> _CONTROL_AREA</a>* ControlArea;                                      //0x0
-    union
-    {
-        ULONG LongFlags;                                                    //0x8
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_MMSUBSECTION_FLAGS'>_MMSUBSECTION_FLAGS</a> SubsectionFlags;                         //0x8
-    } u;                                                                    //0x8
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x8
     ULONG StartingSector;                                                   //0xc
     ULONG NumberOfFullSectors;                                              //0x10
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_MMPTE'> _MMPTE</a>* SubsectionBase;                                          //0x18

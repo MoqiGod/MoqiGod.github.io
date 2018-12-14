@@ -10,24 +10,8 @@ button.button-part(type="button" tabindex="-1" class="dropdown-toggle dropdown-t
 })();</script><pre><code style="min-height: 300px; padding-left: 0px;" class="c"><button id="copy-button" data-clipboard-target="#copyblock" tabindex="-1" data-clipboard-action="copy" class="button btn-info">copy</button><div id="copyblock">//0x18 bytes (sizeof)
 struct _PORT_MESSAGE
 {
-    union
-    {
-        struct
-        {
-            SHORT DataLength;                                               //0x0
-            SHORT TotalLength;                                              //0x2
-        } s1;                                                               //0x0
-        ULONG Length;                                                       //0x0
-    } u1;                                                                   //0x0
-    union
-    {
-        struct
-        {
-            SHORT Type;                                                     //0x4
-            SHORT DataInfoOffset;                                           //0x6
-        } s2;                                                               //0x4
-        ULONG ZeroInit;                                                     //0x4
-    } u2;                                                                   //0x4
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x0
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/<unnamed-tag>'> <unnamed-tag></a> u2;                                                            //0x4
     union
     {
         struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_CLIENT_ID'>_CLIENT_ID</a> ClientId;                                         //0x8

@@ -19,23 +19,7 @@ struct _KALPC_MESSAGE
         VOID* QuotaBlock;                                                   //0x20
     }
     LONG SequenceNo;                                                        //0x28
-    union
-    {
-        struct
-        {
-            ULONG QueueType:2;                                              //0x2c
-            ULONG QueuePortType:4;                                          //0x2c
-            ULONG Canceled:1;                                               //0x2c
-            ULONG Ready:1;                                                  //0x2c
-            ULONG ReleaseMessage:1;                                         //0x2c
-            ULONG SharedQuota:1;                                            //0x2c
-            ULONG ReplyWaitReply:1;                                         //0x2c
-            ULONG OwnerPortReference:1;                                     //0x2c
-            ULONG ReserveReference:1;                                       //0x2c
-            ULONG ReceiverReference:1;                                      //0x2c
-        } s1;                                                               //0x2c
-        ULONG State;                                                        //0x2c
-    } u1;                                                                   //0x2c
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x2c
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_ALPC_PORT'> _ALPC_PORT</a>* CancelSequencePort;                                  //0x30
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_ALPC_PORT'> _ALPC_PORT</a>* CancelQueuePort;                                     //0x38
     LONG CancelSequenceNo;                                                  //0x40

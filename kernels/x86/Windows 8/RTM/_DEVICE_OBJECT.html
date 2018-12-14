@@ -24,11 +24,7 @@ struct _DEVICE_OBJECT
     VOID* DeviceExtension;                                                  //0x28
     ULONG DeviceType;                                                       //0x2c
     CHAR StackSize;                                                         //0x30
-    union
-    {
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_LIST_ENTRY'>_LIST_ENTRY</a> ListEntry;                                       //0x34
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_WAIT_CONTEXT_BLOCK'>_WAIT_CONTEXT_BLOCK</a> Wcb;                                     //0x34
-    } Queue;                                                                //0x34
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/<unnamed-tag>'> <unnamed-tag></a> Queue;                                                         //0x34
     ULONG AlignmentRequirement;                                             //0x5c
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_KDEVICE_QUEUE'>_KDEVICE_QUEUE</a> DeviceQueue;                                      //0x60
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_KDPC'>_KDPC</a> Dpc;                                                       //0x74

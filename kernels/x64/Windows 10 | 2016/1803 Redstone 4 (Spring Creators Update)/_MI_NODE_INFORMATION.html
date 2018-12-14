@@ -21,11 +21,7 @@ struct _MI_NODE_INFORMATION
     ULONG MmShiftedColor;                                                   //0x718
     ULONG Color;                                                            //0x71c
     volatile ULONGLONG ChannelFreeCount[4][2];                              //0x720
-    struct
-    {
-        ULONG ChannelsHotCold:1;                                            //0x760
-        ULONG Spare:31;                                                     //0x760
-    } Flags;                                                                //0x760
+    struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1803 Redstone 4 (Spring Creators Update)/<unnamed-tag>'><unnamed-tag></a> Flags;                                                        //0x760
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1803 Redstone 4 (Spring Creators Update)/_EX_PUSH_LOCK'>_EX_PUSH_LOCK</a> NodeLock;                                          //0x768
     ULONGLONG ZeroThreadHugeMapLock;                                        //0x770
     volatile UCHAR LargeListMoveInProgress;                                 //0x778

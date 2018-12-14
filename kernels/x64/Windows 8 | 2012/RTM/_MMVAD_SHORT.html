@@ -14,16 +14,8 @@ struct _MMVAD_SHORT
     ULONG StartingVpn;                                                      //0x18
     ULONG EndingVpn;                                                        //0x1c
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8 | 2012/RTM/_EX_PUSH_LOCK'>_EX_PUSH_LOCK</a> PushLock;                                          //0x20
-    union
-    {
-        ULONG LongFlags;                                                    //0x28
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8 | 2012/RTM/_MMVAD_FLAGS'>_MMVAD_FLAGS</a> VadFlags;                                       //0x28
-    } u;                                                                    //0x28
-    union
-    {
-        ULONG LongFlags1;                                                   //0x2c
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8 | 2012/RTM/_MMVAD_FLAGS1'>_MMVAD_FLAGS1</a> VadFlags1;                                     //0x2c
-    } u1;                                                                   //0x2c
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8 | 2012/RTM/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x28
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8 | 2012/RTM/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x2c
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8 | 2012/RTM/_MI_VAD_EVENT_BLOCK'> _MI_VAD_EVENT_BLOCK</a>* EventList;                                  //0x30
     LONG ReferenceCount;                                                    //0x38
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 8 | 2012/RTM/_MMVAD" tabindex="-1" class="related">_MMVAD</a></li></ul></div><!--else.block

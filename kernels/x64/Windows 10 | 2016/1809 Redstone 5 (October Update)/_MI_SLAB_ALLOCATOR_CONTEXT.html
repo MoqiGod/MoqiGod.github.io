@@ -16,12 +16,7 @@ struct _MI_SLAB_ALLOCATOR_CONTEXT
     ULONGLONG FreePageCount;                                                //0x20
     ULONGLONG SlabEntryCount;                                               //0x28
     enum<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_MI_SLAB_ALLOCATOR_PROTECTION'> _MI_SLAB_ALLOCATOR_PROTECTION</a> Protection;                          //0x30
-    union
-    {
-        ULONG EntryBecameEmpty:1;                                           //0x34
-        ULONG Spare:31;                                                     //0x34
-        ULONG AllFlags;                                                     //0x34
-    } Flags;                                                                //0x34
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/<unnamed-tag>'> <unnamed-tag></a> Flags;                                                         //0x34
     ULONGLONG LastReplenishTime;                                            //0x38
     ULONGLONG LastFailureTime;                                              //0x40
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/_MI_PARTITION_PAGE_LISTS" tabindex="-1" class="related">_MI_PARTITION_PAGE_LISTS</a></li></ul></div><!--else.block

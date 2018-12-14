@@ -18,15 +18,7 @@ struct _KALPC_VIEW
     ULONGLONG Size;                                                         //0x30
     VOID* SecureViewHandle;                                                 //0x38
     VOID* WriteAccessHandle;                                                //0x40
-    union
-    {
-        struct
-        {
-            ULONG WriteAccess:1;                                            //0x48
-            ULONG AutoRelease:1;                                            //0x48
-            ULONG ForceUnlink:1;                                            //0x48
-        } s1;                                                               //0x48
-    } u1;                                                                   //0x48
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x48
     ULONG NumberOfOwnerMessages;                                            //0x4c
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_LIST_ENTRY'>_LIST_ENTRY</a> ProcessViewListEntry;                                //0x50
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_KALPC_MESSAGE_ATTRIBUTES" tabindex="-1" class="related">_KALPC_MESSAGE_ATTRIBUTES</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_KALPC_REGION" tabindex="-1" class="related">_KALPC_REGION</a></li></ul></div><!--else.block

@@ -33,16 +33,8 @@ struct _HEAP
     ULONGLONG AlignMask;                                                    //0x88
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_LIST_ENTRY'>_LIST_ENTRY</a> VirtualAllocdBlocks;                                 //0x90
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_HEAP_SEGMENT'> _HEAP_SEGMENT</a>* Segments[64];                                     //0xa0
-    union
-    {
-        ULONG FreeListsInUseUlong[4];                                       //0x2a0
-        UCHAR FreeListsInUseBytes[16];                                      //0x2a0
-    } u;                                                                    //0x2a0
-    union
-    {
-        USHORT FreeListsInUseTerminate;                                     //0x2b0
-        USHORT DecommitCount;                                               //0x2b0
-    } u2;                                                                   //0x2b0
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x2a0
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/<unnamed-tag>'> <unnamed-tag></a> u2;                                                            //0x2b0
     USHORT AllocatorBackTraceIndex;                                         //0x2b2
     ULONG NonDedicatedListLength;                                           //0x2b4
     VOID* LargeBlocksIndex;                                                 //0x2b8

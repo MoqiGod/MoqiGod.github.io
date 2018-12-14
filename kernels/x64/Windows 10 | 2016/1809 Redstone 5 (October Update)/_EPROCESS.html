@@ -264,63 +264,12 @@ struct _EPROCESS
     union
     {
         ULONG MitigationFlags;                                              //0x820
-        struct
-        {
-            ULONG ControlFlowGuardEnabled:1;                                //0x820
-            ULONG ControlFlowGuardExportSuppressionEnabled:1;               //0x820
-            ULONG ControlFlowGuardStrict:1;                                 //0x820
-            ULONG DisallowStrippedImages:1;                                 //0x820
-            ULONG ForceRelocateImages:1;                                    //0x820
-            ULONG HighEntropyASLREnabled:1;                                 //0x820
-            ULONG StackRandomizationDisabled:1;                             //0x820
-            ULONG ExtensionPointDisable:1;                                  //0x820
-            ULONG DisableDynamicCode:1;                                     //0x820
-            ULONG DisableDynamicCodeAllowOptOut:1;                          //0x820
-            ULONG DisableDynamicCodeAllowRemoteDowngrade:1;                 //0x820
-            ULONG AuditDisableDynamicCode:1;                                //0x820
-            ULONG DisallowWin32kSystemCalls:1;                              //0x820
-            ULONG AuditDisallowWin32kSystemCalls:1;                         //0x820
-            ULONG EnableFilteredWin32kAPIs:1;                               //0x820
-            ULONG AuditFilteredWin32kAPIs:1;                                //0x820
-            ULONG DisableNonSystemFonts:1;                                  //0x820
-            ULONG AuditNonSystemFontLoading:1;                              //0x820
-            ULONG PreferSystem32Images:1;                                   //0x820
-            ULONG ProhibitRemoteImageMap:1;                                 //0x820
-            ULONG AuditProhibitRemoteImageMap:1;                            //0x820
-            ULONG ProhibitLowILImageMap:1;                                  //0x820
-            ULONG AuditProhibitLowILImageMap:1;                             //0x820
-            ULONG SignatureMitigationOptIn:1;                               //0x820
-            ULONG AuditBlockNonMicrosoftBinaries:1;                         //0x820
-            ULONG AuditBlockNonMicrosoftBinariesAllowStore:1;               //0x820
-            ULONG LoaderIntegrityContinuityEnabled:1;                       //0x820
-            ULONG AuditLoaderIntegrityContinuity:1;                         //0x820
-            ULONG EnableModuleTamperingProtection:1;                        //0x820
-            ULONG EnableModuleTamperingProtectionNoInherit:1;               //0x820
-            ULONG RestrictIndirectBranchPrediction:1;                       //0x820
-            ULONG IsolateSecurityDomain:1;                                  //0x820
-        } MitigationFlagsValues;                                            //0x820
+        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/<unnamed-tag>'><unnamed-tag></a> MitigationFlagsValues;                                    //0x820
     }
     union
     {
         ULONG MitigationFlags2;                                             //0x824
-        struct
-        {
-            ULONG EnableExportAddressFilter:1;                              //0x824
-            ULONG AuditExportAddressFilter:1;                               //0x824
-            ULONG EnableExportAddressFilterPlus:1;                          //0x824
-            ULONG AuditExportAddressFilterPlus:1;                           //0x824
-            ULONG EnableRopStackPivot:1;                                    //0x824
-            ULONG AuditRopStackPivot:1;                                     //0x824
-            ULONG EnableRopCallerCheck:1;                                   //0x824
-            ULONG AuditRopCallerCheck:1;                                    //0x824
-            ULONG EnableRopSimExec:1;                                       //0x824
-            ULONG AuditRopSimExec:1;                                        //0x824
-            ULONG EnableImportAddressFilter:1;                              //0x824
-            ULONG AuditImportAddressFilter:1;                               //0x824
-            ULONG DisablePageCombine:1;                                     //0x824
-            ULONG SpeculativeStoreBypassDisable:1;                          //0x824
-            ULONG CetShadowStacks:1;                                        //0x824
-        } MitigationFlags2Values;                                           //0x824
+        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1809 Redstone 5 (October Update)/<unnamed-tag>'><unnamed-tag></a> MitigationFlags2Values;                                   //0x824
     }
     VOID* PartitionObject;                                                  //0x828
     ULONGLONG SecurityDomain;                                               //0x830

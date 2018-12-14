@@ -18,11 +18,7 @@ struct _PCI_HEADER_TYPE_2
     UCHAR SecondaryBus;                                                     //0x9
     UCHAR SubordinateBus;                                                   //0xa
     UCHAR SecondaryLatency;                                                 //0xb
-    struct
-    {
-        ULONG Base;                                                         //0xc
-        ULONG Limit;                                                        //0x10
-    } Range[4];                                                             //0xc
+    struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/<unnamed-tag>'><unnamed-tag></a> Range[4];                                                     //0xc
     UCHAR InterruptLine;                                                    //0x2c
     UCHAR InterruptPin;                                                     //0x2d
     USHORT BridgeControl;                                                   //0x2e

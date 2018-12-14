@@ -19,30 +19,11 @@ struct _INTERRUPT_VECTOR_DATA
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/_INTERRUPT_REMAPPING_INFO'>_INTERRUPT_REMAPPING_INFO</a> IntRemapInfo;                          //0x28
     union
     {
-        struct
-        {
-            ULONG Gsiv;                                                     //0x38
-            ULONG WakeInterrupt:1;                                          //0x3c
-            ULONG ReservedFlags:31;                                         //0x3c
-        } ControllerInput;                                                  //0x38
-        struct
-        {
-            union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/_LARGE_INTEGER'> _LARGE_INTEGER</a> Address;                                   //0x38
-            ULONG DataPayload;                                              //0x40
-        } XapicMessage;                                                     //0x38
-        struct
-        {
-            struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/_INTERRUPT_HT_INTR_INFO'>_INTERRUPT_HT_INTR_INFO</a> IntrInfo;                        //0x38
-        } Hypertransport;                                                   //0x38
-        struct
-        {
-            union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/_LARGE_INTEGER'> _LARGE_INTEGER</a> Address;                                   //0x38
-            ULONG DataPayload;                                              //0x40
-        } GenericMessage;                                                   //0x38
-        struct
-        {
-            enum<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/HAL_APIC_DESTINATION_MODE'> HAL_APIC_DESTINATION_MODE</a> DestinationMode;                 //0x38
-        } MessageRequest;                                                   //0x38
+        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/<unnamed-tag>'><unnamed-tag></a> ControllerInput;                                          //0x38
+        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/<unnamed-tag>'><unnamed-tag></a> XapicMessage;                                             //0x38
+        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/<unnamed-tag>'><unnamed-tag></a> Hypertransport;                                           //0x38
+        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/<unnamed-tag>'><unnamed-tag></a> GenericMessage;                                           //0x38
+        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/<unnamed-tag>'><unnamed-tag></a> MessageRequest;                                           //0x38
     }
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 8.1 | 2012R2/Update 1/_INTERRUPT_CONNECTION_DATA" tabindex="-1" class="related">_INTERRUPT_CONNECTION_DATA</a></li></ul></div><!--else.block
 script.

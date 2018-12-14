@@ -11,21 +11,13 @@ button.button-part(type="button" tabindex="-1" class="dropdown-toggle dropdown-t
 struct _MMVAD
 {
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_MMVAD_SHORT'>_MMVAD_SHORT</a> Core;                                               //0x0
-    union
-    {
-        ULONG LongFlags2;                                                   //0x40
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_MMVAD_FLAGS2'>_MMVAD_FLAGS2</a> VadFlags2;                                     //0x40
-    } u2;                                                                   //0x40
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/<unnamed-tag>'> <unnamed-tag></a> u2;                                                            //0x40
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_SUBSECTION'> _SUBSECTION</a>* Subsection;                                         //0x48
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_MMPTE'> _MMPTE</a>* FirstPrototypePte;                                       //0x50
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_MMPTE'> _MMPTE</a>* LastContiguousPte;                                       //0x58
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_LIST_ENTRY'>_LIST_ENTRY</a> ViewLinks;                                           //0x60
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_EPROCESS'> _EPROCESS</a>* VadsProcess;                                          //0x70
-    union
-    {
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_MI_VAD_SEQUENTIAL_INFO'>_MI_VAD_SEQUENTIAL_INFO</a> SequentialVa;                        //0x78
-        struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_MMEXTEND_INFO'> _MMEXTEND_INFO</a>* ExtendedInfo;                                //0x78
-    } u4;                                                                   //0x78
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/<unnamed-tag>'> <unnamed-tag></a> u4;                                                            //0x78
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_FILE_OBJECT'> _FILE_OBJECT</a>* FileObject;                                        //0x80
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 10 | 2016/1507 Threshold 1/_MI_CFG_BITMAP_INFO" tabindex="-1" class="related">_MI_CFG_BITMAP_INFO</a></li></ul></div><!--else.block
 script.

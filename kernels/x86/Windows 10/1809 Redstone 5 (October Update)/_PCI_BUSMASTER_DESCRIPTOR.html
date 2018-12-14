@@ -14,25 +14,9 @@ struct _PCI_BUSMASTER_DESCRIPTOR
     ULONG Segment;                                                          //0x4
     union
     {
-        struct
-        {
-            UCHAR Bus;                                                      //0x8
-            UCHAR Device;                                                   //0x9
-            UCHAR Function;                                                 //0xa
-            UCHAR Reserved;                                                 //0xb
-        } DeviceRid;                                                        //0x8
-        struct
-        {
-            UCHAR Bus;                                                      //0x8
-            UCHAR Device;                                                   //0x9
-            UCHAR Function;                                                 //0xa
-            UCHAR Reserved;                                                 //0xb
-        } BridgeRid;                                                        //0x8
-        struct
-        {
-            UCHAR SecondaryBus;                                             //0x8
-            UCHAR SubordinateBus;                                           //0x9
-        } MultipleBridges;                                                  //0x8
+        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1809 Redstone 5 (October Update)/<unnamed-tag>'><unnamed-tag></a> DeviceRid;                                                //0x8
+        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1809 Redstone 5 (October Update)/<unnamed-tag>'><unnamed-tag></a> BridgeRid;                                                //0x8
+        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1809 Redstone 5 (October Update)/<unnamed-tag>'><unnamed-tag></a> MultipleBridges;                                          //0x8
     }
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x86/Windows 10/1809 Redstone 5 (October Update)/HAL_PRIVATE_DISPATCH" tabindex="-1" class="related">HAL_PRIVATE_DISPATCH</a></li></ul></div><!--else.block
 script.

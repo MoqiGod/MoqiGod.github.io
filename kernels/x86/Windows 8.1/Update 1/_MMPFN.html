@@ -10,24 +10,8 @@ button.button-part(type="button" tabindex="-1" class="dropdown-toggle dropdown-t
 })();</script><pre><code style="min-height: 300px; padding-left: 0px;" class="c"><button id="copy-button" data-clipboard-target="#copyblock" tabindex="-1" data-clipboard-action="copy" class="button btn-info">copy</button><div id="copyblock">//0x1c bytes (sizeof)
 struct _MMPFN
 {
-    union
-    {
-        ULONG Flink;                                                        //0x0
-        ULONG WsIndex;                                                      //0x0
-        struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8.1/Update 1/_KEVENT'> _KEVENT</a>* Event;                                              //0x0
-        VOID* Next;                                                         //0x0
-        VOID* volatile VolatileNext;                                        //0x0
-        struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8.1/Update 1/_KTHREAD'> _KTHREAD</a>* KernelStackOwner;                                  //0x0
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8.1/Update 1/_SINGLE_LIST_ENTRY'>_SINGLE_LIST_ENTRY</a> NextStackPfn;                             //0x0
-    } u1;                                                                   //0x0
-    union
-    {
-        ULONG Blink:24;                                                     //0x4
-        ULONG TbFlushStamp:4;                                               //0x4
-        ULONG SpareBlink:3;                                                 //0x4
-        struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8.1/Update 1/_MMPTE'> _MMPTE</a>* ImageProtoPte;                                       //0x4
-        ULONG ShareCount;                                                   //0x4
-    } u2;                                                                   //0x4
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8.1/Update 1/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x0
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8.1/Update 1/<unnamed-tag>'> <unnamed-tag></a> u2;                                                            //0x4
     union
     {
         struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8.1/Update 1/_MMPTE'> _MMPTE</a>* PteAddress;                                          //0x8
@@ -35,36 +19,9 @@ struct _MMPFN
         volatile LONG Lock;                                                 //0x8
         ULONG PteLong;                                                      //0x8
     }
-    union
-    {
-        struct
-        {
-            USHORT ReferenceCount;                                          //0xc
-            struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8.1/Update 1/_MMPFNENTRY'>_MMPFNENTRY</a> e1;                                          //0xe
-        };
-        struct
-        {
-            union
-            {
-                USHORT ReferenceCount;                                      //0xc
-                volatile SHORT VolatileReferenceCount;                      //0xc
-            }
-            union
-            {
-                USHORT ShortFlags;                                          //0xe
-                volatile USHORT VolatileShortFlags;                         //0xe
-            }
-        } e2;                                                               //0xc
-    } u3;                                                                   //0xc
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8.1/Update 1/<unnamed-tag>'> <unnamed-tag></a> u3;                                                            //0xc
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8.1/Update 1/_MMPTE'>_MMPTE</a> OriginalPte;                                              //0x10
-    union
-    {
-        ULONG PteFrame:24;                                                  //0x18
-        ULONG PageIdentity:3;                                               //0x18
-        ULONG PrototypePte:1;                                               //0x18
-        ULONG PageColor:4;                                                  //0x18
-        ULONG EntireField;                                                  //0x18
-    } u4;                                                                   //0x18
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8.1/Update 1/<unnamed-tag>'> <unnamed-tag></a> u4;                                                            //0x18
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x86/Windows 8.1/Update 1/_COLORED_PAGE_INFO" tabindex="-1" class="related">_COLORED_PAGE_INFO</a>,&nbsp;<a href="/kernels/x86/Windows 8.1/Update 1/_MMINPAGE_SUPPORT" tabindex="-1" class="related">_MMINPAGE_SUPPORT</a></li></ul></div><!--else.block
 script.
     if($(".container.mainblock-content.main-tdata-sm").height() < 600)

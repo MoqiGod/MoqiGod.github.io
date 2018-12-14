@@ -11,15 +11,9 @@ button.button-part(type="button" tabindex="-1" class="dropdown-toggle dropdown-t
 struct _MMMOD_WRITER_MDL_ENTRY
 {
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/_LIST_ENTRY'>_LIST_ENTRY</a> Links;                                               //0x0
-    union
-    {
-        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/_IO_STATUS_BLOCK'>_IO_STATUS_BLOCK</a> IoStatus;                                   //0x8
-    } u;                                                                    //0x8
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x8
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/_IRP'> _IRP</a>* Irp;                                                       //0x10
-    union
-    {
-        ULONG KeepForever;                                                  //0x14
-    } u1;                                                                   //0x14
+    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x14
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/_MMPAGING_FILE'> _MMPAGING_FILE</a>* PagingFile;                                      //0x18
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/_FILE_OBJECT'> _FILE_OBJECT</a>* File;                                              //0x1c
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/SP1/_CONTROL_AREA'> _CONTROL_AREA</a>* ControlArea;                                      //0x20

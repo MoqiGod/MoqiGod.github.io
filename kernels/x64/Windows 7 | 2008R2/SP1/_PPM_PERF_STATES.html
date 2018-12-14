@@ -24,13 +24,7 @@ struct _PPM_PERF_STATES
     UCHAR ThrottleStatesOnly;                                               //0x26
     UCHAR PolicyType;                                                       //0x27
     ULONG TimerInterval;                                                    //0x28
-    union
-    {
-        ULONG AsULONG;                                                      //0x2c
-        ULONG IncreasePolicy:2;                                             //0x2c
-        ULONG DecreasePolicy:2;                                             //0x2c
-        ULONG Reserved:28;                                                  //0x2c
-    } Flags;                                                                //0x2c
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/SP1/<unnamed-tag>'> <unnamed-tag></a> Flags;                                                         //0x2c
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/SP1/_KAFFINITY_EX'>_KAFFINITY_EX</a> TargetProcessors;                                  //0x30
     LONG (*PStateHandler)(ULONGLONG arg1, ULONGLONG arg2, ULONGLONG arg3);  //0x58
     ULONGLONG PStateContext;                                                //0x60

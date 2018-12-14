@@ -21,15 +21,7 @@ union _HV_CPUID_RESULT
         ULONG Edx;                                                          //0xc
     };
     ULONG AsUINT32[4];                                                      //0x0
-    struct
-    {
-        ULONG ReservedEax;                                                  //0x0
-        ULONG ReservedEbx:24;                                               //0x4
-        ULONG InitialApicId:8;                                              //0x4
-        ULONG ReservedEcx:31;                                               //0x8
-        ULONG HypervisorPresent:1;                                          //0x8
-        ULONG ReservedEdx;                                                  //0xc
-    } VersionAndFeatures;                                                   //0x0
+    struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8.1/RTM/<unnamed-tag>'><unnamed-tag></a> VersionAndFeatures;                                           //0x0
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8.1/RTM/_HV_VENDOR_AND_MAX_FUNCTION'>_HV_VENDOR_AND_MAX_FUNCTION</a> HvVendorAndMaxFunction;              //0x0
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8.1/RTM/_HV_HYPERVISOR_INTERFACE_INFO'>_HV_HYPERVISOR_INTERFACE_INFO</a> HvInterface;                       //0x0
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8.1/RTM/_HV_HYPERVISOR_VERSION_INFO'>_HV_HYPERVISOR_VERSION_INFO</a> MsHvVersion;                         //0x0

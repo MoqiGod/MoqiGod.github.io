@@ -16,65 +16,7 @@ struct _PLUGPLAY_EVENT_BLOCK
     ULONG Flags;                                                            //0x20
     ULONG TotalSize;                                                        //0x24
     VOID* DeviceObject;                                                     //0x28
-    union
-    {
-        struct
-        {
-            struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/_GUID'>_GUID</a> ClassGuid;                                         //0x30
-            WCHAR SymbolicLinkName[1];                                      //0x40
-        } DeviceClass;                                                      //0x30
-        struct
-        {
-            WCHAR DeviceId[1];                                              //0x30
-        } TargetDevice;                                                     //0x30
-        struct
-        {
-            WCHAR DeviceId[1];                                              //0x30
-        } InstallDevice;                                                    //0x30
-        struct
-        {
-            VOID* NotificationStructure;                                    //0x30
-            WCHAR DeviceId[1];                                              //0x38
-        } CustomNotification;                                               //0x30
-        struct
-        {
-            VOID* Notification;                                             //0x30
-        } ProfileNotification;                                              //0x30
-        struct
-        {
-            ULONG NotificationCode;                                         //0x30
-            ULONG NotificationData;                                         //0x34
-        } PowerNotification;                                                //0x30
-        struct
-        {
-            enum<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/_PNP_VETO_TYPE'> _PNP_VETO_TYPE</a> VetoType;                                   //0x30
-            WCHAR DeviceIdVetoNameBuffer[1];                                //0x34
-        } VetoNotification;                                                 //0x30
-        struct
-        {
-            struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/_GUID'>_GUID</a> BlockedDriverGuid;                                 //0x30
-        } BlockedDriverNotification;                                        //0x30
-        struct
-        {
-            WCHAR ParentId[1];                                              //0x30
-        } InvalidIDNotification;                                            //0x30
-        struct
-        {
-            struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/_GUID'>_GUID</a> PowerSettingGuid;                                  //0x30
-            ULONG Flags;                                                    //0x40
-            ULONG SessionId;                                                //0x44
-            ULONG DataLength;                                               //0x48
-            UCHAR Data[1];                                                  //0x4c
-        } PowerSettingNotification;                                         //0x30
-        struct
-        {
-            WCHAR DeviceId[1];                                              //0x30
-        } PropertyChangeNotification;                                       //0x30
-        struct
-        {
-            WCHAR DeviceId[1];                                              //0x30
-        } DeviceInstanceNotification;                                       //0x30
-    } u;                                                                    //0x30
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 8.1 | 2012R2/Update 1/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x30
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 8.1 | 2012R2/Update 1/_PNP_DEVICE_EVENT_ENTRY" tabindex="-1" class="related">_PNP_DEVICE_EVENT_ENTRY</a></li></ul></div><!--else.block
 script.
     if($(".container.mainblock-content.main-tdata-sm").height() < 600)

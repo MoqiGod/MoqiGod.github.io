@@ -17,11 +17,7 @@ struct _CONTROL_AREA
     ULONG NumberOfMappedViews;                                              //0x20
     ULONG NumberOfSystemCacheViews;                                         //0x24
     ULONG NumberOfUserReferences;                                           //0x28
-    union
-    {
-        ULONG LongFlags;                                                    //0x2c
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_MMSECTION_FLAGS'>_MMSECTION_FLAGS</a> Flags;                                      //0x2c
-    } u;                                                                    //0x2c
+    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x2c
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_FILE_OBJECT'> _FILE_OBJECT</a>* FilePointer;                                       //0x30
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows XP | 2003/SP2/_EVENT_COUNTER'> _EVENT_COUNTER</a>* WaitingForDeletion;                              //0x38
     USHORT ModifiedWriteCount;                                              //0x40
