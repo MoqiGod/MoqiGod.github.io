@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _PCI_COMMON_CONFIG</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _PCI_COMMON_CONFIG</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><link rel="prefetch" href="/images/bigback.jpg"><link rel="prefetch" href="/images/abstrHalf.jpg"><link rel="prefetch" href="/images/edit.png"><link rel="prefetch" href="/images/inter.jpg"><link rel="prefetch" href="/images/lonelysturn.jpg"><link rel="prefetch" href="/images/mainpla.png"><link rel="prefetch" href="/images/man.jpg"><link rel="prefetch" href="/images/multlong2.jpg"><link rel="prefetch" href="/images/newfam.jpg"><link rel="prefetch" href="/images/view.jpg"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag() {
     dataLayer.push(arguments);
 }
@@ -22,7 +22,12 @@ struct _PCI_COMMON_CONFIG
     UCHAR LatencyTimer;                                                     //0xd
     UCHAR HeaderType;                                                       //0xe
     UCHAR BIST;                                                             //0xf
-    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 2003/SP2/__unnamed'> __unnamed</a> u;                                                      //0x10
+    union
+    {
+        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 2003/SP2/_PCI_HEADER_TYPE_0'>_PCI_HEADER_TYPE_0</a> type0;                                    //0x10
+        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 2003/SP2/_PCI_HEADER_TYPE_1'>_PCI_HEADER_TYPE_1</a> type1;                                    //0x10
+        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 2003/SP2/_PCI_HEADER_TYPE_2'>_PCI_HEADER_TYPE_2</a> type2;                                    //0x10
+    } u;                                                                    //0x10
     UCHAR DeviceSpecific[192];                                              //0x40
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x86/Windows 2003/SP2/_PCI_BUS_INTERFACE_STANDARD" tabindex="-1" class="related">_PCI_BUS_INTERFACE_STANDARD</a>,&nbsp;<a href="/kernels/x86/Windows 2003/SP2/_PCI_FDO_EXTENSION" tabindex="-1" class="related">_PCI_FDO_EXTENSION</a></li></ul></div><!--else.block
 script.

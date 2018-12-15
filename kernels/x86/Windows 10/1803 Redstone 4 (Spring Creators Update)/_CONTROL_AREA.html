@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _CONTROL_AREA</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _CONTROL_AREA</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><link rel="prefetch" href="/images/bigback.jpg"><link rel="prefetch" href="/images/abstrHalf.jpg"><link rel="prefetch" href="/images/edit.png"><link rel="prefetch" href="/images/inter.jpg"><link rel="prefetch" href="/images/lonelysturn.jpg"><link rel="prefetch" href="/images/mainpla.png"><link rel="prefetch" href="/images/man.jpg"><link rel="prefetch" href="/images/multlong2.jpg"><link rel="prefetch" href="/images/newfam.jpg"><link rel="prefetch" href="/images/view.jpg"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag() {
     dataLayer.push(arguments);
 }
@@ -16,15 +16,55 @@ struct _CONTROL_AREA
     ULONG NumberOfPfnReferences;                                            //0x10
     ULONG NumberOfMappedViews;                                              //0x14
     ULONG NumberOfUserReferences;                                           //0x18
-    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x1c
+    union
+    {
+        ULONG LongFlags;                                                    //0x1c
+        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_MMSECTION_FLAGS'>_MMSECTION_FLAGS</a> Flags;                                      //0x1c
+    } u;                                                                    //0x1c
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_EX_FAST_REF'>_EX_FAST_REF</a> FilePointer;                                        //0x20
     volatile LONG ControlAreaLock;                                          //0x24
     ULONG ModifiedWriteCount;                                               //0x28
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_MI_CONTROL_AREA_WAIT_BLOCK'> _MI_CONTROL_AREA_WAIT_BLOCK</a>* WaitList;                           //0x2c
-    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/<unnamed-tag>'> <unnamed-tag></a> u2;                                                            //0x30
+    union
+    {
+        struct
+        {
+            union
+            {
+                ULONG NumberOfSystemCacheViews;                             //0x30
+                ULONG ImageRelocationStartBit;                              //0x30
+            }
+            union
+            {
+                volatile LONG WritableUserReferences;                       //0x34
+                struct
+                {
+                    ULONG ImageRelocationSizeIn64k:16;                      //0x34
+                    ULONG LargePage:1;                                      //0x34
+                    ULONG SystemImage:1;                                    //0x34
+                    ULONG StrongCode:2;                                     //0x34
+                    ULONG CantMove:1;                                       //0x34
+                    ULONG BitMap:2;                                         //0x34
+                    ULONG ImageActive:1;                                    //0x34
+                }
+            }
+            union
+            {
+                ULONG FlushInProgressCount;                                 //0x38
+                ULONG NumberOfSubsections;                                  //0x38
+                struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_MI_IMAGE_SECURITY_REFERENCE'> _MI_IMAGE_SECURITY_REFERENCE</a>* SeImageStub;           //0x38
+            }
+        } e2;                                                               //0x30
+    } u2;                                                                   //0x30
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_EX_PUSH_LOCK'>_EX_PUSH_LOCK</a> FileObjectLock;                                    //0x3c
     volatile ULONGLONG LockedPages;                                         //0x40
-    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/<unnamed-tag>'> <unnamed-tag></a> u3;                                                            //0x48
+    union
+    {
+        ULONG IoAttributionContext:29;                                      //0x48
+        ULONG Spare:3;                                                      //0x48
+        ULONG ImageCrossPartitionCharge;                                    //0x48
+        ULONG CommittedPageCount:20;                                        //0x48
+    } u3;                                                                   //0x48
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_MAPPED_FILE_SEGMENT" tabindex="-1" class="related">_MAPPED_FILE_SEGMENT</a>,&nbsp;<a href="/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_MI_SECTION_STATE" tabindex="-1" class="related">_MI_SECTION_STATE</a>,&nbsp;<a href="/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_MMINPAGE_SUPPORT" tabindex="-1" class="related">_MMINPAGE_SUPPORT</a>,&nbsp;<a href="/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_MMMOD_WRITER_MDL_ENTRY" tabindex="-1" class="related">_MMMOD_WRITER_MDL_ENTRY</a>,&nbsp;<a href="/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_SECTION" tabindex="-1" class="related">_SECTION</a>,&nbsp;<a href="/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_SEGMENT" tabindex="-1" class="related">_SEGMENT</a>,&nbsp;<a href="/kernels/x86/Windows 10/1803 Redstone 4 (Spring Creators Update)/_SUBSECTION" tabindex="-1" class="related">_SUBSECTION</a></li></ul></div><!--else.block
 script.
     if($(".container.mainblock-content.main-tdata-sm").height() < 600)

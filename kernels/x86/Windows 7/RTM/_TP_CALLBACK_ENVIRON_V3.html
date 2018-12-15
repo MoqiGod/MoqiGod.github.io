@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _TP_CALLBACK_ENVIRON_V3</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _TP_CALLBACK_ENVIRON_V3</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><link rel="prefetch" href="/images/bigback.jpg"><link rel="prefetch" href="/images/abstrHalf.jpg"><link rel="prefetch" href="/images/edit.png"><link rel="prefetch" href="/images/inter.jpg"><link rel="prefetch" href="/images/lonelysturn.jpg"><link rel="prefetch" href="/images/mainpla.png"><link rel="prefetch" href="/images/man.jpg"><link rel="prefetch" href="/images/multlong2.jpg"><link rel="prefetch" href="/images/newfam.jpg"><link rel="prefetch" href="/images/view.jpg"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag() {
     dataLayer.push(arguments);
 }
@@ -17,7 +17,16 @@ struct _TP_CALLBACK_ENVIRON_V3
     VOID* RaceDll;                                                          //0x10
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/_ACTIVATION_CONTEXT'> _ACTIVATION_CONTEXT</a>* ActivationContext;                          //0x14
     VOID (*FinalizationCallback)(struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/_TP_CALLBACK_INSTANCE'> _TP_CALLBACK_INSTANCE</a>* arg1, VOID* arg2); //0x18
-    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x1c
+    union
+    {
+        ULONG Flags;                                                        //0x1c
+        struct
+        {
+            ULONG LongFunction:1;                                           //0x1c
+            ULONG Persistent:1;                                             //0x1c
+            ULONG Private:30;                                               //0x1c
+        } s;                                                                //0x1c
+    } u;                                                                    //0x1c
     enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/_TP_CALLBACK_PRIORITY'> _TP_CALLBACK_PRIORITY</a> CallbackPriority;                            //0x20
     ULONG Size;                                                             //0x24
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"></div></div></div><footer class="container-fluid footer-fluid"><div class="container"><div class="row"><div class="col-md-12 footer-style"><a href="/terms" tabindex="-1" class="footer_link"><strong>Terms of Service&nbsp;</strong></a><span style="color: #262633">|</span><a href="/privacy" tabindex="-1" class="footer_link"><strong>&nbsp;Privacy Policy&nbsp;</strong></a><span style="color: #262633">|<a href="https://github.com/RevJay/vergilius-project/issues" tabindex="-1" class="footer_link"><strong>&nbsp;Report a Bug &nbsp;</strong></a></span><span style="color: #262633">|</span>&nbsp;© 2018 Copyright: <a href="https://github.com/RevJay" tabindex="-1" class="footer_link"><strong>RevJay&nbsp;</strong></a></div></div></div></footer></body></html>

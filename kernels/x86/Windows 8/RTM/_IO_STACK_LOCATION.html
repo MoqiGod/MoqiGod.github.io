@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _IO_STACK_LOCATION</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _IO_STACK_LOCATION</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><link rel="prefetch" href="/images/bigback.jpg"><link rel="prefetch" href="/images/abstrHalf.jpg"><link rel="prefetch" href="/images/edit.png"><link rel="prefetch" href="/images/inter.jpg"><link rel="prefetch" href="/images/lonelysturn.jpg"><link rel="prefetch" href="/images/mainpla.png"><link rel="prefetch" href="/images/man.jpg"><link rel="prefetch" href="/images/multlong2.jpg"><link rel="prefetch" href="/images/newfam.jpg"><link rel="prefetch" href="/images/view.jpg"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag() {
     dataLayer.push(arguments);
 }
@@ -14,7 +14,238 @@ struct _IO_STACK_LOCATION
     UCHAR MinorFunction;                                                    //0x1
     UCHAR Flags;                                                            //0x2
     UCHAR Control;                                                          //0x3
-    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/<unnamed-tag>'> <unnamed-tag></a> Parameters;                                                    //0x4
+    union
+    {
+        struct
+        {
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_IO_SECURITY_CONTEXT'> _IO_SECURITY_CONTEXT</a>* SecurityContext;                   //0x4
+            ULONG Options;                                                  //0x8
+            USHORT FileAttributes;                                          //0xc
+            USHORT ShareAccess;                                             //0xe
+            ULONG EaLength;                                                 //0x10
+        } Create;                                                           //0x4
+        struct
+        {
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_IO_SECURITY_CONTEXT'> _IO_SECURITY_CONTEXT</a>* SecurityContext;                   //0x4
+            ULONG Options;                                                  //0x8
+            USHORT Reserved;                                                //0xc
+            USHORT ShareAccess;                                             //0xe
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_NAMED_PIPE_CREATE_PARAMETERS'> _NAMED_PIPE_CREATE_PARAMETERS</a>* Parameters;               //0x10
+        } CreatePipe;                                                       //0x4
+        struct
+        {
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_IO_SECURITY_CONTEXT'> _IO_SECURITY_CONTEXT</a>* SecurityContext;                   //0x4
+            ULONG Options;                                                  //0x8
+            USHORT Reserved;                                                //0xc
+            USHORT ShareAccess;                                             //0xe
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_MAILSLOT_CREATE_PARAMETERS'> _MAILSLOT_CREATE_PARAMETERS</a>* Parameters;                 //0x10
+        } CreateMailslot;                                                   //0x4
+        struct
+        {
+            ULONG Length;                                                   //0x4
+            ULONG Key;                                                      //0x8
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> ByteOffset;                                //0xc
+        } Read;                                                             //0x4
+        struct
+        {
+            ULONG Length;                                                   //0x4
+            ULONG Key;                                                      //0x8
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> ByteOffset;                                //0xc
+        } Write;                                                            //0x4
+        struct
+        {
+            ULONG Length;                                                   //0x4
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_UNICODE_STRING'> _UNICODE_STRING</a>* FileName;                               //0x8
+            enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_FILE_INFORMATION_CLASS'> _FILE_INFORMATION_CLASS</a> FileInformationClass;              //0xc
+            ULONG FileIndex;                                                //0x10
+        } QueryDirectory;                                                   //0x4
+        struct
+        {
+            ULONG Length;                                                   //0x4
+            ULONG CompletionFilter;                                         //0x8
+        } NotifyDirectory;                                                  //0x4
+        struct
+        {
+            ULONG Length;                                                   //0x4
+            enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_FILE_INFORMATION_CLASS'> _FILE_INFORMATION_CLASS</a> FileInformationClass;              //0x8
+        } QueryFile;                                                        //0x4
+        struct
+        {
+            ULONG Length;                                                   //0x4
+            enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_FILE_INFORMATION_CLASS'> _FILE_INFORMATION_CLASS</a> FileInformationClass;              //0x8
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_FILE_OBJECT'> _FILE_OBJECT</a>* FileObject;                                //0xc
+            union
+            {
+                struct
+                {
+                    UCHAR ReplaceIfExists;                                  //0x10
+                    UCHAR AdvanceOnly;                                      //0x11
+                }
+                ULONG ClusterCount;                                         //0x10
+                VOID* DeleteHandle;                                         //0x10
+            }
+        } SetFile;                                                          //0x4
+        struct
+        {
+            ULONG Length;                                                   //0x4
+            VOID* EaList;                                                   //0x8
+            ULONG EaListLength;                                             //0xc
+            ULONG EaIndex;                                                  //0x10
+        } QueryEa;                                                          //0x4
+        struct
+        {
+            ULONG Length;                                                   //0x4
+        } SetEa;                                                            //0x4
+        struct
+        {
+            ULONG Length;                                                   //0x4
+            enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_FSINFOCLASS'> _FSINFOCLASS</a> FsInformationClass;                           //0x8
+        } QueryVolume;                                                      //0x4
+        struct
+        {
+            ULONG Length;                                                   //0x4
+            enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_FSINFOCLASS'> _FSINFOCLASS</a> FsInformationClass;                           //0x8
+        } SetVolume;                                                        //0x4
+        struct
+        {
+            ULONG OutputBufferLength;                                       //0x4
+            ULONG InputBufferLength;                                        //0x8
+            ULONG FsControlCode;                                            //0xc
+            VOID* Type3InputBuffer;                                         //0x10
+        } FileSystemControl;                                                //0x4
+        struct
+        {
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a>* Length;                                   //0x4
+            ULONG Key;                                                      //0x8
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> ByteOffset;                                //0xc
+        } LockControl;                                                      //0x4
+        struct
+        {
+            ULONG OutputBufferLength;                                       //0x4
+            ULONG InputBufferLength;                                        //0x8
+            ULONG IoControlCode;                                            //0xc
+            VOID* Type3InputBuffer;                                         //0x10
+        } DeviceIoControl;                                                  //0x4
+        struct
+        {
+            ULONG SecurityInformation;                                      //0x4
+            ULONG Length;                                                   //0x8
+        } QuerySecurity;                                                    //0x4
+        struct
+        {
+            ULONG SecurityInformation;                                      //0x4
+            VOID* SecurityDescriptor;                                       //0x8
+        } SetSecurity;                                                      //0x4
+        struct
+        {
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_VPB'> _VPB</a>* Vpb;                                               //0x4
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_DEVICE_OBJECT'> _DEVICE_OBJECT</a>* DeviceObject;                            //0x8
+        } MountVolume;                                                      //0x4
+        struct
+        {
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_VPB'> _VPB</a>* Vpb;                                               //0x4
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_DEVICE_OBJECT'> _DEVICE_OBJECT</a>* DeviceObject;                            //0x8
+        } VerifyVolume;                                                     //0x4
+        struct
+        {
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_SCSI_REQUEST_BLOCK'> _SCSI_REQUEST_BLOCK</a>* Srb;                                //0x4
+        } Scsi;                                                             //0x4
+        struct
+        {
+            ULONG Length;                                                   //0x4
+            VOID* StartSid;                                                 //0x8
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_FILE_GET_QUOTA_INFORMATION'> _FILE_GET_QUOTA_INFORMATION</a>* SidList;                    //0xc
+            ULONG SidListLength;                                            //0x10
+        } QueryQuota;                                                       //0x4
+        struct
+        {
+            ULONG Length;                                                   //0x4
+        } SetQuota;                                                         //0x4
+        struct
+        {
+            enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_DEVICE_RELATION_TYPE'> _DEVICE_RELATION_TYPE</a> Type;                                //0x4
+        } QueryDeviceRelations;                                             //0x4
+        struct
+        {
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_GUID'> _GUID</a>* InterfaceType;                                    //0x4
+            USHORT Size;                                                    //0x8
+            USHORT Version;                                                 //0xa
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_INTERFACE'> _INTERFACE</a>* Interface;                                   //0xc
+            VOID* InterfaceSpecificData;                                    //0x10
+        } QueryInterface;                                                   //0x4
+        struct
+        {
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_DEVICE_CAPABILITIES'> _DEVICE_CAPABILITIES</a>* Capabilities;                      //0x4
+        } DeviceCapabilities;                                               //0x4
+        struct
+        {
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_IO_RESOURCE_REQUIREMENTS_LIST'> _IO_RESOURCE_REQUIREMENTS_LIST</a>* IoResourceRequirementList; //0x4
+        } FilterResourceRequirements;                                       //0x4
+        struct
+        {
+            ULONG WhichSpace;                                               //0x4
+            VOID* Buffer;                                                   //0x8
+            ULONG Offset;                                                   //0xc
+            ULONG Length;                                                   //0x10
+        } ReadWriteConfig;                                                  //0x4
+        struct
+        {
+            UCHAR Lock;                                                     //0x4
+        } SetLock;                                                          //0x4
+        struct
+        {
+            enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/BUS_QUERY_ID_TYPE'> BUS_QUERY_ID_TYPE</a> IdType;                                  //0x4
+        } QueryId;                                                          //0x4
+        struct
+        {
+            enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/DEVICE_TEXT_TYPE'> DEVICE_TEXT_TYPE</a> DeviceTextType;                           //0x4
+            ULONG LocaleId;                                                 //0x8
+        } QueryDeviceText;                                                  //0x4
+        struct
+        {
+            UCHAR InPath;                                                   //0x4
+            UCHAR Reserved[3];                                              //0x5
+            enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_DEVICE_USAGE_NOTIFICATION_TYPE'> _DEVICE_USAGE_NOTIFICATION_TYPE</a> Type;                      //0x8
+        } UsageNotification;                                                //0x4
+        struct
+        {
+            enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_SYSTEM_POWER_STATE'> _SYSTEM_POWER_STATE</a> PowerState;                            //0x4
+        } WaitWake;                                                         //0x4
+        struct
+        {
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_POWER_SEQUENCE'> _POWER_SEQUENCE</a>* PowerSequence;                          //0x4
+        } PowerSequence;                                                    //0x4
+        struct
+        {
+            union
+            {
+                ULONG SystemContext;                                        //0x4
+                struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_SYSTEM_POWER_STATE_CONTEXT'>_SYSTEM_POWER_STATE_CONTEXT</a> SystemPowerStateContext; //0x4
+            }
+            enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_POWER_STATE_TYPE'> _POWER_STATE_TYPE</a> Type;                                    //0x8
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_POWER_STATE'> _POWER_STATE</a> State;                                       //0xc
+            enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/POWER_ACTION'> POWER_ACTION</a> ShutdownType;                                 //0x10
+        } Power;                                                            //0x4
+        struct
+        {
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_CM_RESOURCE_LIST'> _CM_RESOURCE_LIST</a>* AllocatedResources;                   //0x4
+            struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_CM_RESOURCE_LIST'> _CM_RESOURCE_LIST</a>* AllocatedResourcesTranslated;         //0x8
+        } StartDevice;                                                      //0x4
+        struct
+        {
+            ULONG ProviderId;                                               //0x4
+            VOID* DataPath;                                                 //0x8
+            ULONG BufferSize;                                               //0xc
+            VOID* Buffer;                                                   //0x10
+        } WMI;                                                              //0x4
+        struct
+        {
+            VOID* Argument1;                                                //0x4
+            VOID* Argument2;                                                //0x8
+            VOID* Argument3;                                                //0xc
+            VOID* Argument4;                                                //0x10
+        } Others;                                                           //0x4
+    } Parameters;                                                           //0x4
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_DEVICE_OBJECT'> _DEVICE_OBJECT</a>* DeviceObject;                                    //0x14
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_FILE_OBJECT'> _FILE_OBJECT</a>* FileObject;                                        //0x18
     LONG (*CompletionRoutine)(struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_DEVICE_OBJECT'> _DEVICE_OBJECT</a>* arg1, struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 8/RTM/_IRP'> _IRP</a>* arg2, VOID* arg3); //0x1c

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _ALPC_PORT</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _ALPC_PORT</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><link rel="prefetch" href="/images/bigback.jpg"><link rel="prefetch" href="/images/abstrHalf.jpg"><link rel="prefetch" href="/images/edit.png"><link rel="prefetch" href="/images/inter.jpg"><link rel="prefetch" href="/images/lonelysturn.jpg"><link rel="prefetch" href="/images/mainpla.png"><link rel="prefetch" href="/images/man.jpg"><link rel="prefetch" href="/images/multlong2.jpg"><link rel="prefetch" href="/images/newfam.jpg"><link rel="prefetch" href="/images/view.jpg"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag() {
     dataLayer.push(arguments);
 }
@@ -43,7 +43,29 @@ struct _ALPC_PORT
     LONG SequenceNo;                                                        //0xe8
     LONG ReferenceNo;                                                       //0xec
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1507 Threshold 1/_PALPC_PORT_REFERENCE_WAIT_BLOCK'> _PALPC_PORT_REFERENCE_WAIT_BLOCK</a>* ReferenceNoWait;               //0xf0
-    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1507 Threshold 1/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0xf4
+    union
+    {
+        struct
+        {
+            ULONG Initialized:1;                                            //0xf4
+            ULONG Type:2;                                                   //0xf4
+            ULONG ConnectionPending:1;                                      //0xf4
+            ULONG ConnectionRefused:1;                                      //0xf4
+            ULONG Disconnected:1;                                           //0xf4
+            ULONG Closed:1;                                                 //0xf4
+            ULONG NoFlushOnClose:1;                                         //0xf4
+            ULONG ReturnExtendedInfo:1;                                     //0xf4
+            ULONG Waitable:1;                                               //0xf4
+            ULONG DynamicSecurity:1;                                        //0xf4
+            ULONG Wow64CompletionList:1;                                    //0xf4
+            ULONG Lpc:1;                                                    //0xf4
+            ULONG LpcToLpc:1;                                               //0xf4
+            ULONG HasCompletionList:1;                                      //0xf4
+            ULONG HadCompletionList:1;                                      //0xf4
+            ULONG EnableCompletionList:1;                                   //0xf4
+        } s1;                                                               //0xf4
+        ULONG State;                                                        //0xf4
+    } u1;                                                                   //0xf4
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1507 Threshold 1/_ALPC_PORT'> _ALPC_PORT</a>* TargetQueuePort;                                     //0xf8
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1507 Threshold 1/_ALPC_PORT'> _ALPC_PORT</a>* TargetSequencePort;                                  //0xfc
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 10/1507 Threshold 1/_KALPC_MESSAGE'> _KALPC_MESSAGE</a>* CachedMessage;                                   //0x100

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _MMMOD_WRITER_MDL_ENTRY</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _MMMOD_WRITER_MDL_ENTRY</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><link rel="prefetch" href="/images/bigback.jpg"><link rel="prefetch" href="/images/abstrHalf.jpg"><link rel="prefetch" href="/images/edit.png"><link rel="prefetch" href="/images/inter.jpg"><link rel="prefetch" href="/images/lonelysturn.jpg"><link rel="prefetch" href="/images/mainpla.png"><link rel="prefetch" href="/images/man.jpg"><link rel="prefetch" href="/images/multlong2.jpg"><link rel="prefetch" href="/images/newfam.jpg"><link rel="prefetch" href="/images/view.jpg"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag() {
     dataLayer.push(arguments);
 }
@@ -11,9 +11,15 @@ button.button-part(type="button" tabindex="-1" class="dropdown-toggle dropdown-t
 struct _MMMOD_WRITER_MDL_ENTRY
 {
     struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_LIST_ENTRY'>_LIST_ENTRY</a> Links;                                               //0x0
-    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x8
+    union
+    {
+        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_IO_STATUS_BLOCK'>_IO_STATUS_BLOCK</a> IoStatus;                                   //0x8
+    } u;                                                                    //0x8
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_IRP'> _IRP</a>* Irp;                                                       //0x10
-    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x14
+    union
+    {
+        ULONG KeepForever;                                                  //0x14
+    } u1;                                                                   //0x14
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_MMPAGING_FILE'> _MMPAGING_FILE</a>* PagingFile;                                      //0x18
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_FILE_OBJECT'> _FILE_OBJECT</a>* File;                                              //0x1c
     struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_CONTROL_AREA'> _CONTROL_AREA</a>* ControlArea;                                      //0x20

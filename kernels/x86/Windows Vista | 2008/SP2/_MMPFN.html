@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _MMPFN</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _MMPFN</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><link rel="prefetch" href="/images/bigback.jpg"><link rel="prefetch" href="/images/abstrHalf.jpg"><link rel="prefetch" href="/images/edit.png"><link rel="prefetch" href="/images/inter.jpg"><link rel="prefetch" href="/images/lonelysturn.jpg"><link rel="prefetch" href="/images/mainpla.png"><link rel="prefetch" href="/images/man.jpg"><link rel="prefetch" href="/images/multlong2.jpg"><link rel="prefetch" href="/images/newfam.jpg"><link rel="prefetch" href="/images/view.jpg"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag() {
     dataLayer.push(arguments);
 }
@@ -10,18 +10,61 @@ button.button-part(type="button" tabindex="-1" class="dropdown-toggle dropdown-t
 })();</script><pre><code style="min-height: 300px; padding-left: 0px;" class="c"><button id="copy-button" data-clipboard-target="#copyblock" tabindex="-1" data-clipboard-action="copy" class="button btn-info">copy</button><div id="copyblock">//0x18 bytes (sizeof)
 struct _MMPFN
 {
-    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/<unnamed-tag>'> <unnamed-tag></a> u1;                                                            //0x0
-    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/<unnamed-tag>'> <unnamed-tag></a> u2;                                                            //0x4
+    union
+    {
+        ULONG Flink;                                                        //0x0
+        ULONG WsIndex;                                                      //0x0
+        struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_KEVENT'> _KEVENT</a>* Event;                                              //0x0
+        VOID* Next;                                                         //0x0
+        VOID* volatile VolatileNext;                                        //0x0
+        struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_KTHREAD'> _KTHREAD</a>* KernelStackOwner;                                  //0x0
+        struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_SINGLE_LIST_ENTRY'>_SINGLE_LIST_ENTRY</a> NextStackPfn;                             //0x0
+    } u1;                                                                   //0x0
+    union
+    {
+        ULONG Blink;                                                        //0x4
+        struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_MMPTE'> _MMPTE</a>* ImageProtoPte;                                       //0x4
+        ULONG ShareCount;                                                   //0x4
+    } u2;                                                                   //0x4
     union
     {
         struct<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_MMPTE'> _MMPTE</a>* PteAddress;                                          //0x8
         VOID* volatile VolatilePteAddress;                                  //0x8
     }
-    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/<unnamed-tag>'> <unnamed-tag></a> u3;                                                            //0xc
+    union
+    {
+        struct
+        {
+            USHORT ReferenceCount;                                          //0xc
+            struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_MMPFNENTRY'>_MMPFNENTRY</a> e1;                                          //0xe
+        };
+        struct
+        {
+            union
+            {
+                USHORT ReferenceCount;                                      //0xc
+                volatile SHORT VolatileReferenceCount;                      //0xc
+            }
+            USHORT ShortFlags;                                              //0xe
+        } e2;                                                               //0xc
+        struct
+        {
+            USHORT ReferenceCount;                                          //0xc
+            UCHAR ByteFlags;                                                //0xe
+            UCHAR InterlockedByteFlags;                                     //0xf
+        } e3;                                                               //0xc
+    } u3;                                                                   //0xc
     union
     {
         struct <a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/_MMPTE'>_MMPTE</a> OriginalPte;                                          //0x10
         volatile LONG AweReferenceCount;                                    //0x10
     }
-    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows Vista | 2008/SP2/<unnamed-tag>'> <unnamed-tag></a> u4;                                                            //0x14
+    union
+    {
+        ULONG PteFrame:25;                                                  //0x14
+        ULONG PfnImageVerified:1;                                           //0x14
+        ULONG AweAllocation:1;                                              //0x14
+        ULONG PrototypePte:1;                                               //0x14
+        ULONG PageColor:4;                                                  //0x14
+    } u4;                                                                   //0x14
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"></div></div></div><footer class="container-fluid footer-fluid"><div class="container"><div class="row"><div class="col-md-12 footer-style"><a href="/terms" tabindex="-1" class="footer_link"><strong>Terms of Service&nbsp;</strong></a><span style="color: #262633">|</span><a href="/privacy" tabindex="-1" class="footer_link"><strong>&nbsp;Privacy Policy&nbsp;</strong></a><span style="color: #262633">|<a href="https://github.com/RevJay/vergilius-project/issues" tabindex="-1" class="footer_link"><strong>&nbsp;Report a Bug &nbsp;</strong></a></span><span style="color: #262633">|</span>&nbsp;© 2018 Copyright: <a href="https://github.com/RevJay" tabindex="-1" class="footer_link"><strong>RevJay&nbsp;</strong></a></div></div></div></footer></body></html>

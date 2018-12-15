@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _CM_PARTIAL_RESOURCE_DESCRIPTOR</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _CM_PARTIAL_RESOURCE_DESCRIPTOR</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><link rel="prefetch" href="/images/bigback.jpg"><link rel="prefetch" href="/images/abstrHalf.jpg"><link rel="prefetch" href="/images/edit.png"><link rel="prefetch" href="/images/inter.jpg"><link rel="prefetch" href="/images/lonelysturn.jpg"><link rel="prefetch" href="/images/mainpla.png"><link rel="prefetch" href="/images/man.jpg"><link rel="prefetch" href="/images/multlong2.jpg"><link rel="prefetch" href="/images/newfam.jpg"><link rel="prefetch" href="/images/view.jpg"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag() {
     dataLayer.push(arguments);
 }
@@ -13,7 +13,88 @@ struct _CM_PARTIAL_RESOURCE_DESCRIPTOR
     UCHAR Type;                                                             //0x0
     UCHAR ShareDisposition;                                                 //0x1
     USHORT Flags;                                                           //0x2
-    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/RTM/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x4
+    union
+    {
+        struct
+        {
+            union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> Start;                                     //0x4
+            ULONG Length;                                                   //0xc
+        } Generic;                                                          //0x4
+        struct
+        {
+            union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> Start;                                     //0x4
+            ULONG Length;                                                   //0xc
+        } Port;                                                             //0x4
+        struct
+        {
+            USHORT Level;                                                   //0x4
+            USHORT Group;                                                   //0x6
+            ULONG Vector;                                                   //0x8
+            ULONGLONG Affinity;                                             //0xc
+        } Interrupt;                                                        //0x4
+        struct
+        {
+            union
+            {
+                struct
+                {
+                    USHORT Group;                                           //0x4
+                    USHORT MessageCount;                                    //0x6
+                    ULONG Vector;                                           //0x8
+                    ULONGLONG Affinity;                                     //0xc
+                } Raw;                                                      //0x4
+                struct
+                {
+                    USHORT Level;                                           //0x4
+                    USHORT Group;                                           //0x6
+                    ULONG Vector;                                           //0x8
+                    ULONGLONG Affinity;                                     //0xc
+                } Translated;                                               //0x4
+            }
+        } MessageInterrupt;                                                 //0x4
+        struct
+        {
+            union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> Start;                                     //0x4
+            ULONG Length;                                                   //0xc
+        } Memory;                                                           //0x4
+        struct
+        {
+            ULONG Channel;                                                  //0x4
+            ULONG Port;                                                     //0x8
+            ULONG Reserved1;                                                //0xc
+        } Dma;                                                              //0x4
+        struct
+        {
+            ULONG Data[3];                                                  //0x4
+        } DevicePrivate;                                                    //0x4
+        struct
+        {
+            ULONG Start;                                                    //0x4
+            ULONG Length;                                                   //0x8
+            ULONG Reserved;                                                 //0xc
+        } BusNumber;                                                        //0x4
+        struct
+        {
+            ULONG DataSize;                                                 //0x4
+            ULONG Reserved1;                                                //0x8
+            ULONG Reserved2;                                                //0xc
+        } DeviceSpecificData;                                               //0x4
+        struct
+        {
+            union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> Start;                                     //0x4
+            ULONG Length40;                                                 //0xc
+        } Memory40;                                                         //0x4
+        struct
+        {
+            union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> Start;                                     //0x4
+            ULONG Length48;                                                 //0xc
+        } Memory48;                                                         //0x4
+        struct
+        {
+            union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 7 | 2008R2/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> Start;                                     //0x4
+            ULONG Length64;                                                 //0xc
+        } Memory64;                                                         //0x4
+    } u;                                                                    //0x4
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 7 | 2008R2/RTM/_ARBITER_INSTANCE" tabindex="-1" class="related">_ARBITER_INSTANCE</a>,&nbsp;<a href="/kernels/x64/Windows 7 | 2008R2/RTM/_ARBITER_LIST_ENTRY" tabindex="-1" class="related">_ARBITER_LIST_ENTRY</a>,&nbsp;<a href="/kernels/x64/Windows 7 | 2008R2/RTM/_ARBITER_RETEST_ALLOCATION_PARAMETERS" tabindex="-1" class="related">_ARBITER_RETEST_ALLOCATION_PARAMETERS</a>,&nbsp;<a href="/kernels/x64/Windows 7 | 2008R2/RTM/_ARBITER_TEST_ALLOCATION_PARAMETERS" tabindex="-1" class="related">_ARBITER_TEST_ALLOCATION_PARAMETERS</a>,&nbsp;<a href="/kernels/x64/Windows 7 | 2008R2/RTM/_CM_PARTIAL_RESOURCE_LIST" tabindex="-1" class="related">_CM_PARTIAL_RESOURCE_LIST</a></li></ul></div><!--else.block
 script.
     if($(".container.mainblock-content.main-tdata-sm").height() < 600)

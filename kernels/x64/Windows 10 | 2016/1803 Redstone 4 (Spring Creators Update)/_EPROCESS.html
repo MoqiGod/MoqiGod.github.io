@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _EPROCESS</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _EPROCESS</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><link rel="prefetch" href="/images/bigback.jpg"><link rel="prefetch" href="/images/abstrHalf.jpg"><link rel="prefetch" href="/images/edit.png"><link rel="prefetch" href="/images/inter.jpg"><link rel="prefetch" href="/images/lonelysturn.jpg"><link rel="prefetch" href="/images/mainpla.png"><link rel="prefetch" href="/images/man.jpg"><link rel="prefetch" href="/images/multlong2.jpg"><link rel="prefetch" href="/images/newfam.jpg"><link rel="prefetch" href="/images/view.jpg"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag() {
     dataLayer.push(arguments);
 }
@@ -259,12 +259,59 @@ struct _EPROCESS
     union
     {
         ULONG MitigationFlags;                                              //0x828
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1803 Redstone 4 (Spring Creators Update)/<unnamed-tag>'><unnamed-tag></a> MitigationFlagsValues;                                    //0x828
+        struct
+        {
+            ULONG ControlFlowGuardEnabled:1;                                //0x828
+            ULONG ControlFlowGuardExportSuppressionEnabled:1;               //0x828
+            ULONG ControlFlowGuardStrict:1;                                 //0x828
+            ULONG DisallowStrippedImages:1;                                 //0x828
+            ULONG ForceRelocateImages:1;                                    //0x828
+            ULONG HighEntropyASLREnabled:1;                                 //0x828
+            ULONG StackRandomizationDisabled:1;                             //0x828
+            ULONG ExtensionPointDisable:1;                                  //0x828
+            ULONG DisableDynamicCode:1;                                     //0x828
+            ULONG DisableDynamicCodeAllowOptOut:1;                          //0x828
+            ULONG DisableDynamicCodeAllowRemoteDowngrade:1;                 //0x828
+            ULONG AuditDisableDynamicCode:1;                                //0x828
+            ULONG DisallowWin32kSystemCalls:1;                              //0x828
+            ULONG AuditDisallowWin32kSystemCalls:1;                         //0x828
+            ULONG EnableFilteredWin32kAPIs:1;                               //0x828
+            ULONG AuditFilteredWin32kAPIs:1;                                //0x828
+            ULONG DisableNonSystemFonts:1;                                  //0x828
+            ULONG AuditNonSystemFontLoading:1;                              //0x828
+            ULONG PreferSystem32Images:1;                                   //0x828
+            ULONG ProhibitRemoteImageMap:1;                                 //0x828
+            ULONG AuditProhibitRemoteImageMap:1;                            //0x828
+            ULONG ProhibitLowILImageMap:1;                                  //0x828
+            ULONG AuditProhibitLowILImageMap:1;                             //0x828
+            ULONG SignatureMitigationOptIn:1;                               //0x828
+            ULONG AuditBlockNonMicrosoftBinaries:1;                         //0x828
+            ULONG AuditBlockNonMicrosoftBinariesAllowStore:1;               //0x828
+            ULONG LoaderIntegrityContinuityEnabled:1;                       //0x828
+            ULONG AuditLoaderIntegrityContinuity:1;                         //0x828
+            ULONG EnableModuleTamperingProtection:1;                        //0x828
+            ULONG EnableModuleTamperingProtectionNoInherit:1;               //0x828
+            ULONG Reserved:1;                                               //0x828
+        } MitigationFlagsValues;                                            //0x828
     }
     union
     {
         ULONG MitigationFlags2;                                             //0x82c
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1803 Redstone 4 (Spring Creators Update)/<unnamed-tag>'><unnamed-tag></a> MitigationFlags2Values;                                   //0x82c
+        struct
+        {
+            ULONG EnableExportAddressFilter:1;                              //0x82c
+            ULONG AuditExportAddressFilter:1;                               //0x82c
+            ULONG EnableExportAddressFilterPlus:1;                          //0x82c
+            ULONG AuditExportAddressFilterPlus:1;                           //0x82c
+            ULONG EnableRopStackPivot:1;                                    //0x82c
+            ULONG AuditRopStackPivot:1;                                     //0x82c
+            ULONG EnableRopCallerCheck:1;                                   //0x82c
+            ULONG AuditRopCallerCheck:1;                                    //0x82c
+            ULONG EnableRopSimExec:1;                                       //0x82c
+            ULONG AuditRopSimExec:1;                                        //0x82c
+            ULONG EnableImportAddressFilter:1;                              //0x82c
+            ULONG AuditImportAddressFilter:1;                               //0x82c
+        } MitigationFlags2Values;                                           //0x82c
     }
     VOID* PartitionObject;                                                  //0x830
     ULONGLONG SecurityDomain;                                               //0x838

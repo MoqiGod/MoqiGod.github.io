@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _PROCESSOR_POWER_STATE</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _PROCESSOR_POWER_STATE</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><link rel="prefetch" href="/images/bigback.jpg"><link rel="prefetch" href="/images/abstrHalf.jpg"><link rel="prefetch" href="/images/edit.png"><link rel="prefetch" href="/images/inter.jpg"><link rel="prefetch" href="/images/lonelysturn.jpg"><link rel="prefetch" href="/images/mainpla.png"><link rel="prefetch" href="/images/man.jpg"><link rel="prefetch" href="/images/multlong2.jpg"><link rel="prefetch" href="/images/newfam.jpg"><link rel="prefetch" href="/images/view.jpg"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag() {
     dataLayer.push(arguments);
 }
@@ -15,8 +15,14 @@ struct _PROCESSOR_POWER_STATE
     ULONGLONG IdleTimeAccumulated;                                          //0x10
     union
     {
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/<unnamed-tag>'><unnamed-tag></a> Native;                                                   //0x18
-        struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/<unnamed-tag>'><unnamed-tag></a> Hv;                                                       //0x18
+        struct
+        {
+            ULONGLONG IdleTransitionTime;                                   //0x18
+        } Native;                                                           //0x18
+        struct
+        {
+            ULONGLONG LastIdleCheck;                                        //0x18
+        } Hv;                                                               //0x18
     }
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/PPM_IDLE_ACCOUNTING'> PPM_IDLE_ACCOUNTING</a>* IdleAccounting;                             //0x20
     struct<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_PPM_PERF_STATES'> _PPM_PERF_STATES</a>* PerfStates;                                    //0x28
@@ -26,7 +32,13 @@ struct _PROCESSOR_POWER_STATE
     ULONGLONG LastProcessorTimeHv;                                          //0x40
     UCHAR ThermalConstraint;                                                //0x48
     UCHAR LastBusyPercentage;                                               //0x49
-    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/<unnamed-tag>'> <unnamed-tag></a> Flags;                                                         //0x4a
+    union
+    {
+        USHORT AsUSHORT;                                                    //0x4a
+        USHORT PStateDomain:1;                                              //0x4a
+        USHORT PStateDomainIdleAccounting:1;                                //0x4a
+        USHORT Reserved:14;                                                 //0x4a
+    } Flags;                                                                //0x4a
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_KTIMER'>_KTIMER</a> PerfTimer;                                               //0x50
     struct <a class='str-link' tabindex='-1' href='/kernels/x64/Windows Vista | 2008/SP1/_KDPC'>_KDPC</a> PerfDpc;                                                   //0x90
     ULONG LastSysTime;                                                      //0xd0

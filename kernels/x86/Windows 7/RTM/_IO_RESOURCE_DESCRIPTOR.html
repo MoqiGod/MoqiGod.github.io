@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _IO_RESOURCE_DESCRIPTOR</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vergilius Project | _IO_RESOURCE_DESCRIPTOR</title><link href="/images/favicon.ico" rel="icon" type="image/x-icon"><link rel="stylesheet" href="/css/dracula.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link rel="stylesheet" href="/css/verg.css"><link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d"><link rel="prefetch" href="/images/bigback.jpg"><link rel="prefetch" href="/images/abstrHalf.jpg"><link rel="prefetch" href="/images/edit.png"><link rel="prefetch" href="/images/inter.jpg"><link rel="prefetch" href="/images/lonelysturn.jpg"><link rel="prefetch" href="/images/mainpla.png"><link rel="prefetch" href="/images/man.jpg"><link rel="prefetch" href="/images/multlong2.jpg"><link rel="prefetch" href="/images/newfam.jpg"><link rel="prefetch" href="/images/view.jpg"><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-130860740-1"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag() {
     dataLayer.push(arguments);
 }
@@ -16,7 +16,82 @@ struct _IO_RESOURCE_DESCRIPTOR
     UCHAR Spare1;                                                           //0x3
     USHORT Flags;                                                           //0x4
     USHORT Spare2;                                                          //0x6
-    union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/<unnamed-tag>'> <unnamed-tag></a> u;                                                             //0x8
+    union
+    {
+        struct
+        {
+            ULONG Length;                                                   //0x8
+            ULONG Alignment;                                                //0xc
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> MinimumAddress;                            //0x10
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> MaximumAddress;                            //0x18
+        } Port;                                                             //0x8
+        struct
+        {
+            ULONG Length;                                                   //0x8
+            ULONG Alignment;                                                //0xc
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> MinimumAddress;                            //0x10
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> MaximumAddress;                            //0x18
+        } Memory;                                                           //0x8
+        struct
+        {
+            ULONG MinimumVector;                                            //0x8
+            ULONG MaximumVector;                                            //0xc
+            USHORT AffinityPolicy;                                          //0x10
+            USHORT Group;                                                   //0x12
+            enum<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/_IRQ_PRIORITY'> _IRQ_PRIORITY</a> PriorityPolicy;                              //0x14
+            ULONG TargetedProcessors;                                       //0x18
+        } Interrupt;                                                        //0x8
+        struct
+        {
+            ULONG MinimumChannel;                                           //0x8
+            ULONG MaximumChannel;                                           //0xc
+        } Dma;                                                              //0x8
+        struct
+        {
+            ULONG Length;                                                   //0x8
+            ULONG Alignment;                                                //0xc
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> MinimumAddress;                            //0x10
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> MaximumAddress;                            //0x18
+        } Generic;                                                          //0x8
+        struct
+        {
+            ULONG Data[3];                                                  //0x8
+        } DevicePrivate;                                                    //0x8
+        struct
+        {
+            ULONG Length;                                                   //0x8
+            ULONG MinBusNumber;                                             //0xc
+            ULONG MaxBusNumber;                                             //0x10
+            ULONG Reserved;                                                 //0x14
+        } BusNumber;                                                        //0x8
+        struct
+        {
+            ULONG Priority;                                                 //0x8
+            ULONG Reserved1;                                                //0xc
+            ULONG Reserved2;                                                //0x10
+        } ConfigData;                                                       //0x8
+        struct
+        {
+            ULONG Length40;                                                 //0x8
+            ULONG Alignment40;                                              //0xc
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> MinimumAddress;                            //0x10
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> MaximumAddress;                            //0x18
+        } Memory40;                                                         //0x8
+        struct
+        {
+            ULONG Length48;                                                 //0x8
+            ULONG Alignment48;                                              //0xc
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> MinimumAddress;                            //0x10
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> MaximumAddress;                            //0x18
+        } Memory48;                                                         //0x8
+        struct
+        {
+            ULONG Length64;                                                 //0x8
+            ULONG Alignment64;                                              //0xc
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> MinimumAddress;                            //0x10
+            union<a class='str-link' tabindex='-1' href='/kernels/x86/Windows 7/RTM/_LARGE_INTEGER'> _LARGE_INTEGER</a> MaximumAddress;                            //0x18
+        } Memory64;                                                         //0x8
+    } u;                                                                    //0x8
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x86/Windows 7/RTM/_ARBITER_ALTERNATIVE" tabindex="-1" class="related">_ARBITER_ALTERNATIVE</a>,&nbsp;<a href="/kernels/x86/Windows 7/RTM/_ARBITER_INSTANCE" tabindex="-1" class="related">_ARBITER_INSTANCE</a>,&nbsp;<a href="/kernels/x86/Windows 7/RTM/_ARBITER_LIST_ENTRY" tabindex="-1" class="related">_ARBITER_LIST_ENTRY</a>,&nbsp;<a href="/kernels/x86/Windows 7/RTM/_ARBITER_QUERY_CONFLICT_PARAMETERS" tabindex="-1" class="related">_ARBITER_QUERY_CONFLICT_PARAMETERS</a>,&nbsp;<a href="/kernels/x86/Windows 7/RTM/_IO_RESOURCE_LIST" tabindex="-1" class="related">_IO_RESOURCE_LIST</a></li></ul></div><!--else.block
 script.
     if($(".container.mainblock-content.main-tdata-sm").height() < 600)
