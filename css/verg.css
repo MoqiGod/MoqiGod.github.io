@@ -78,12 +78,13 @@ strong {
 .nothing
 {
     padding-left: 10px;
+    padding-top: 40px !important;
     font-family: "Open Sans", sans-serif;
     padding-top: 5px;
     font-size: 20px;
     font-weight: 600;
-    color: white;
-    text-align: left;
+    color: #1CC1CC;
+    text-align: center;
 }
 
 a.related
@@ -1613,7 +1614,7 @@ a.linked-in.socicon-linkedin:hover
     .nothing
     {
         padding-left: 10px;
-        font-size: 20px;
+        font-size: 26px;
     }
     .md-odd
     {
