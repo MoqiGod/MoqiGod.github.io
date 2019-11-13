@@ -60,5 +60,13 @@ struct _KPROCESS
     UCHAR AddressPolicy;                                                    //0x288
     UCHAR Spare2[71];                                                       //0x289
     VOID* InstrumentationCallback;                                          //0x2d0
-    union<a class='str-link' tabindex='-1' href='/kernels/x64/Windows 10 | 2016/1909 19H2 (November 2019 Update)/<anonymous-tag>'> <anonymous-tag></a> SecureState;                                                   //0x2d8
+    union
+    {
+        ULONGLONG SecureHandle;                                             //0x2d8
+        struct
+        {
+            ULONGLONG SecureProcess:1;                                      //0x2d8
+            ULONGLONG Unused:1;                                             //0x2d8
+        } Flags;                                                            //0x2d8
+    } SecureState;                                                          //0x2d8
 }; </div></code></pre></div></div></div></div></div></div><div class="row"><div class="col-md-12"><div class="maincross"><h4 class="h4-tdata">Used in</h4><div class="used-in-block"><ul type="none"><li><a href="/kernels/x64/Windows 10 | 2016/1909 19H2 (November 2019 Update)/_EPROCESS" tabindex="-1" class="related">_EPROCESS</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1909 19H2 (November 2019 Update)/_KAPC_STATE" tabindex="-1" class="related">_KAPC_STATE</a>,&nbsp;<a href="/kernels/x64/Windows 10 | 2016/1909 19H2 (November 2019 Update)/_KTHREAD" tabindex="-1" class="related">_KTHREAD</a></li></ul></div></div></div></div></div><footer class="container-fluid footer-fluid"><div class="container"><div class="row"><div class="col-md-12 footer-style"><a href="/terms" tabindex="-1" class="footer_link"><strong>Terms of Service&nbsp;</strong></a><span style="color: #262633">|</span><a href="/privacy" tabindex="-1" class="footer_link"><strong>&nbsp;Privacy Policy&nbsp;</strong></a><span style="color: #262633">|<a href="https://github.com/RevJay/vergilius-project/issues" tabindex="-1" class="footer_link"><strong>&nbsp;Report a Bug &nbsp;</strong></a></span><span style="color: #262633">|</span>&nbsp;© 2018 Copyright: <a href="https://github.com/RevJay" tabindex="-1" class="footer_link"><strong>RevJay&nbsp;</strong></a></div></div></div></footer></body></html>
